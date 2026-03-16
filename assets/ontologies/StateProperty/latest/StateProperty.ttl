@@ -5,164 +5,475 @@
 @prefix StateProperty: <https://w3id.org/italia/real-estate/onto/StateProperty/> .
 @prefix TI: <https://w3id.org/italia/onto/TI/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
 
-StateProperty: a owl:Ontology ;
-    owl:versionIRI <urn:absolute:0.1> .
 
-### Object Properties
+#################################################################
+#    inizio metadati 
+#################################################################
 
-CLV:hasSpatialCoverage a owl:ObjectProperty .
+<https://w3id.org/italia/real-estate/onto/StateProperty> rdf:type owl:Ontology ;
+                                    owl:versionIRI <urn:absolute:0.1> ;
+                                    owl:imports <https://w3id.org/italia/onto/l0> , <https://w3id.org/italia/onto/CLV/> ;
+                                    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+                                    dct:creator <https://w3id.org/italia/data/public-organization/ISTAT> ,
+												<https://w3id.org/italia/data/public-organization/agd>  ;
+                                    dct:description "La risorsa modella il dominio dei beni immobili dello stato gestiti dall’Agenzia del Demanio, definendone le caratteristiche fisiche, le categorie patrimoniali e le specifiche destinazioni d'uso. L'ontologia permette di rappresentare i dati amministrativi e tecnici necessari alla gestione e al monitoraggio del patrimonio immobiliare dello Stato, facilitando l'interoperabilità tra i sistemi informativi dell'Agenzia del Demanio e delle altre pubbliche amministrazioni."@it ,
+                                                    "The resource models the domain of state-owned real estate assets managed by the Italian State Property Agency, defining their physical characteristics, property categories, and specific uses. The ontology enables the representation of the administrative and technical data required for the management and monitoring of the State’s real estate assets, facilitating interoperability between the information systems of the State Property Agency and those of other public administrations."@en ;
+                                    dct:identifier "https://w3id.org/italia/real-estate/onto/StateProperty" ;
+                                    dct:issued "2026-03-16"^^xsd:date ;
+                                    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+                                    dct:modified "2026-03-16"^^xsd:date ;
+                                    dct:publisher <https://w3id.org/italia/data/public-organization/agd> ;
+                                    dct:rightsHolder <https://w3id.org/italia/data/public-organization/agd> ; 
+                                    dct:title "Ontologia dei beni immobili dello Stato"@it ,
+									          "State-Owned Real Estate Assets Ontology"@en ;
+									dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+									dct:temporal "Dal 2026" ;
+									dct:subject <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+                                    rdfs:comment "Modello concettuale per la rappresentazione dei dati relativi ai beni immobili dello Stato gestiti dall’Agenzia del Demanio, inclusi gli aspetti di catalogazione e agibilità."@it ,
+                                                 "Conceptual model for the representation of data related to state-owned real estate assets managed by the Italian State Property Agency, including aspects of cataloguing and usability certification."@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/italia/real-estate/onto/StateProperty>  ;
+                                    rdfs:label "Ontologia dei beni immobili dello Stato"@it ,
+									           "State-Owned Real Estate Assets Ontology"@en ;
+                                    owl:versionInfo "Versione 1.0"@en ,
+                                                    "Version 1.0"@it ;
+                                    dcat:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
+                                    dcat:keyword "Demanio"@it , "Patrimonio immobiliare dello Stato"@it , "Gestione patrimoniale"@it , "Beni pubblici dello Stato"@it ,
+                                                 "State property"@en , "Real estate"@en , "Asset management"@en , "State public assets"@en ; 													 
+                                    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;						
+                                    prov:wasDerivedFrom <https://w3id.org/italia/real-estate/onto/StateProperty/1.0> ;
+                                    admsapit:acronym "BIS" ;
+                                    admsapit:hasContributor <https://w3id.org/italia/data/organization/public-organization/td> ;                               
+                                    admsapit:hasOntologyLanguage admsapit:OWL ;
+                                    admsapit:hasSemanticAssetDistribution <https://w3id.org/italia/data/distribution/StateProperty-JSON-LD> ,
+                                                                          <https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE> ,
+                                                                          <https://w3id.org/italia/data/distribution/StateProperty-RDF-XML> ;
+									admsapit:semanticAssetInUse <https://w3id.org/italia/data/project/CLV> ;
+									admsapit:hasKeyClass StateProperty:BeneImmobileDelloStato ;
+                                    admsapit:hasTask admsapit:AnnotationTask ,
+                                                     admsapit:QueryFormulationTask ,
+                                                     admsapit:SearchTask ;
+                                    admsapit:officialURI "https://w3id.org/italia/real-estate/onto/StateProperty"^^xsd:anyURI ;
+                                    admsapit:prefix "StateProperty" ;
+                                    admsapit:status "catalogued" ,
+                                                    "published" ;
+                                    admsapit:target "Pubbliche Amministrazioni".
 
-StateProperty:haCategoriaBeneDelloStato a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha categoria bene dello Stato"@it ;
-    rdfs:domain StateProperty:SchedaDiCatalogazione ;
-    rdfs:range StateProperty:CategoriaBeneDelloStato .
 
-StateProperty:haCategoriaPatrimoniale a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha categoria patrimoniale"@it ;
-    rdfs:domain StateProperty:StatoDelBeneImmobileDelloStato ;
-    rdfs:range StateProperty:TipoCategoriaPatrimonialeImmobile .
+<https://w3id.org/italia/data/project/CLV> rdf:type owl:NamedIndividual ,
+    admsapit:SemanticAsset ;
+	l0:name "Ontologia degli Indirizzi/Luoghi"@it .
 
-StateProperty:haCodiceSEC a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha codice SEC"@it ;
-    rdfs:domain StateProperty:BeneImmobileDelloStato ;
-    rdfs:range StateProperty:CodiceMEFRaccordoSECImmobile .
+<https://w3id.org/italia/data/public-organization/ISTAT>
+   a dcatapit:Agent, foaf:Agent ;
+   dct:identifier "ISTAT" ;
+   foaf:name "Istituto Nazionale di Statistica"@it , "Italian National Institute of Statistics"@en .
+  
+<https://w3id.org/italia/data/public-organization/agd>
+   a dcatapit:Agent, foaf:Agent ;
+   dct:identifier "Demanio" ;
+   foaf:name "Agenzia del demanio"@it , "State Property Agency"@en .
+  
+  
+<https://w3id.org/italia/data/contact-point/ISTAT-NDC>
+   a	dcatapit:Organization , vcard:Organization, vcard:Kind ;
+   vcard:fn "Segreteria Tecnica Istat - Progetto PNRR National Data Catalog" ;
+   vcard:hasEmail <mailto:ndc-segr-tec@istat.it> .     
+	
+<https://w3id.org/italia/data/standard/SKOS>
+   a dcatapit:Standard , dct:Standard ;
+   dct:identifier "SKOS" ;
+   foaf:name "Simple Knowledge Organization System (SKOS)"@en ;
+   dct:title "Simple Knowledge Organization System - SKOS" ;
+   dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" .
+ 
+ 
+ 
+#################################################################
+#    distribution
+#################################################################
+ 
 
-StateProperty:haDestinazioneDiUso a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha destinazione di uso"@it ;
-    rdfs:domain StateProperty:StatoDelBeneImmobileDelloStato ;
-    rdfs:range StateProperty:TipoDestinazioneDiUsoImmobile .
+<https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE> rdf:type owl:NamedIndividual ,
+                                                                        admsapit:SemanticAssetDistribution ;
+                                                               dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia dei beni immobili dello Stato"@it ,
+                                                                               "This is the distribution in RDF/turtle of State-Owned Real Estate Assets Ontology"@en ;
+                                                               dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+                                                               dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+                                                               dct:title "Distribuzione RDF/Turtle dell'ontologia dei beni immobili dello Stato"@it ,
+                                                                         "RDF/Turtle distribution of State-Owned Real Estate Assets Ontology"@en ;
+                                                               dcat:accessURL <https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest> ;
+                                                               dcat:downloadURL <https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.ttl> .  
+ 
 
-StateProperty:haSchedaDiCatalogazione a owl:ObjectProperty ;
-    rdfs:label "ha scheda di catalogazione"@it ;
-    rdfs:domain StateProperty:BeneImmobileDelloStato ;
-    rdfs:range StateProperty:SchedaDiCatalogazione .
+<https://w3id.org/italia/data/distribution/StateProperty-JSON-LD> rdf:type owl:NamedIndividual ,
+                                                                     admsapit:SemanticAssetDistribution ;
+                                                            dct:description "Questa è la distribuzione JSON-LD dell'ontologia dei beni immobili dello Stato"@it ,
+                                                                            "This is the distribution in JSON-LD of State-Owned Real Estate Assets Ontology"@en ;
+                                                            dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+                                                            dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+                                                            dct:title "Distribuzione JSON-LD dell'ontologia dei beni immobili dello Stato"@it ,
+                                                                      "JSON-LD distribution of State-Owned Real Estate Assets Ontology"@en ;
+                                                            dcat:accessURL <https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest> ;
+                                                            dcat:downloadURL <https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.jsonld> .
 
-StateProperty:haStatoDelBeneImmobileDelloStato a owl:InverseFunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha stato del bene immobile dello Stato"@it ;
-    rdfs:domain StateProperty:BeneImmobileDelloStato ;
-    rdfs:range StateProperty:StatoDelBeneImmobileDelloStato .
 
-StateProperty:haStatoDiAgibilità a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha stato di agibilità"@it ;
-    rdfs:domain StateProperty:StatoDelBeneImmobileDelloStato ;
-    rdfs:range StateProperty:TipoStatoDiAgibilitaImmobile .
+<https://w3id.org/italia/data/distribution/StateProperty-RDF-XML> rdf:type owl:NamedIndividual ,
+                                                                     admsapit:SemanticAssetDistribution ;
+                                                            dct:description "Questa è la distribuzione RDF/XML dell'ontologia dei beni immobili dello Stato"@it ,
+                                                                            "This is the distribution in RDF/XML of State-Owned Real Estate Assets Ontology"@en ;
+                                                            dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+                                                            dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+                                                            dct:title "Distribuzione RDF/XML dell'ontologia dei beni immobili dello Stato"@it ,
+                                                                      "RDF/XML distribution of State-Owned Real Estate Assets Ontology"@en ;
+                                                            dcat:accessURL <https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest> ;
+                                                            dcat:downloadURL <https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.rdf> .
+ 
+ 
+                                                                
+ 
+#################################################################
+#    fine metadati 
+#################################################################
 
-StateProperty:haStatoDiOccupazione a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha stato di occupazione"@it ;
-    rdfs:domain StateProperty:StatoDelBeneImmobileDelloStato ;
-    rdfs:range StateProperty:TipoStatoDiOccupazioneImmobile .
 
-StateProperty:haTipoDiAccesso a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "ha tipo di accesso"@it ;
-    rdfs:domain StateProperty:StatoDelBeneImmobileDelloStato ;
-    rdfs:range StateProperty:TipoDiAccessoImmobile .
+#################################################################
+#    Datatypes
 
-StateProperty:riferisceProvincia a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "riferisce provincia"@it ;
-    rdfs:domain StateProperty:SchedaDiCatalogazione ;
-    rdfs:range CLV:Province .
+#################################################################
+###  http://www.w3.org/2001/XMLSchema#boolean
+xsd:boolean rdf:type rdfs:Datatype .
 
-### Datatypes
 
-xsd:boolean a rdfs:Datatype .
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
 
-xsd:string a rdfs:Datatype .
 
-### Data Properties
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/italia/onto/CLV/hasSpatialCoverage
+CLV:hasSpatialCoverage rdf:type owl:ObjectProperty .
 
-StateProperty:avvisoSchedaProvvisoria a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:label "avviso scheda provvisoria"@it ;
-    rdfs:domain StateProperty:SchedaDiCatalogazione ;
-    rdfs:range xsd:boolean .
 
-StateProperty:codiceSchedaCatalogazione a owl:DatatypeProperty,
-        owl:FunctionalProperty ;
-    rdfs:label "codice scheda catalogazione"@it ;
-    rdfs:domain StateProperty:SchedaDiCatalogazione ;
-    rdfs:range xsd:string .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBene
+StateProperty:haCategoriaBene rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain StateProperty:SchedaCatalogazioneBene ;
+                              rdfs:range StateProperty:CategoriaBeneImmobile ;
+                              rdfs:label "ha categoria bene dello Stato"@it ,
+                                         "has category State Property"@en .
 
-### Classes
 
-CLV:Identifier a owl:Class .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaPatrimoniale
+StateProperty:haCategoriaPatrimoniale rdf:type owl:ObjectProperty ,
+                                               owl:FunctionalProperty ;
+                                      rdfs:domain StateProperty:StatoBeneImmobile ;
+                                      rdfs:range StateProperty:TipoCategoriaPatrimonialeImmobile ;
+                                      rdfs:label "ha categoria patrimoniale"@it ,
+                                                 "has asset category"@en .
 
-CLV:Province a owl:Class .
 
-StateProperty:Area a owl:Class ;
-    rdfs:label "Area"@it ;
-    owl:disjointWith StateProperty:Fabbricato .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haCodiceSEC
+StateProperty:haCodiceSEC rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain StateProperty:BeneImmobileDelloStato ;
+                          rdfs:range StateProperty:CodiceMEFRaccordoSECBeneImmobile ;
+                          rdfs:label "ha codice SEC"@it ,
+                                     "has ESA code"@en .
 
-StateProperty:BeneImmobileDelloStato a owl:Class ;
-    rdfs:label "Bene immobile dello Stato"@it ;
-    rdfs:subClassOf StateProperty:Cespite,
-        [ a owl:Restriction ;
-            owl:onProperty CLV:hasSpatialCoverage ;
-            owl:someValuesFrom owl:Thing ] .
 
-StateProperty:CategoriaBeneDelloStato a owl:Class ;
-    rdfs:label "Categoria bene dello Stato"@it .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneUso
+StateProperty:haDestinazioneUso rdf:type owl:ObjectProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain StateProperty:StatoBeneImmobile ;
+                                rdfs:range StateProperty:TipoDestinazioneUsoImmobile ;
+                                rdfs:label "ha destinazione di uso"@it ,
+                                           "has designed use"@en .
 
-StateProperty:Cespite a owl:Class ;
-    rdfs:label "Cespite"@it .
 
-StateProperty:CodiceMEFRaccordoSEC a owl:Class ;
-    rdfs:label "Codice MEF raccordo SEC"@it ;
-    rdfs:subClassOf CLV:Identifier .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaCatalogazione
+StateProperty:haSchedaCatalogazione rdf:type owl:ObjectProperty ;
+                                    rdfs:domain StateProperty:BeneImmobileDelloStato ;
+                                    rdfs:range StateProperty:SchedaCatalogazioneBene ;
+                                    rdfs:label "ha scheda di catalogazione"@it ,
+                                               "has a catalog record"@en .
 
-StateProperty:CodiceMEFRaccordoSECImmobile a owl:Class ;
-    rdfs:label "Codice MEF raccordo SEC bene immobile"@it ;
-    rdfs:subClassOf StateProperty:CodiceMEFRaccordoSEC .
 
-StateProperty:Fabbricato a owl:Class ;
-    rdfs:label "Fabbricato"@it .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haStatoAgibilità
+StateProperty:haStatoAgibilità rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain StateProperty:StatoBeneImmobile ;
+                               rdfs:range StateProperty:TipoStatoAgibilitàImmobile ;
+                               rdfs:label "ha stato di agibilità"@it ,
+                                          "has status of habitability"@en .
 
-StateProperty:SchedaDiCatalogazione a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty StateProperty:haCategoriaBeneDelloStato ;
-            owl:someValuesFrom owl:Thing ],
-        [ a owl:Restriction ;
-            owl:onProperty StateProperty:riferisceProvincia ;
-            owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Scheda di catalogazione"@it .
 
-StateProperty:StatoDelBeneImmobileDelloStato a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf StateProperty:haStatoDelBeneImmobileDelloStato ] ;
-            owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Stato del Bene immobile dello Stato"@it ;
-    rdfs:subClassOf TI:TimeIndexedEvent .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobile
+StateProperty:haStatoDelBeneImmobile rdf:type owl:ObjectProperty ,
+                                              owl:InverseFunctionalProperty ;
+                                     rdfs:domain StateProperty:BeneImmobileDelloStato ;
+                                     rdfs:range StateProperty:StatoBeneImmobile ;
+                                     rdfs:label "ha stato del bene immobile dello Stato"@it ,
+                                                "has status the property real-estate"@en .
 
-StateProperty:TipoCategoriaPatrimonialeImmobile a owl:Class ;
-    rdfs:label "Tipo categoria patrimoniale immobile"@it .
 
-StateProperty:TipoDestinazioneDiUsoImmobile a owl:Class ;
-    rdfs:label "Tipo destinazione di uso immobile"@it .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haStatoOccupazione
+StateProperty:haStatoOccupazione rdf:type owl:ObjectProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain StateProperty:StatoBeneImmobile ;
+                                 rdfs:range StateProperty:TipoStatoOccupazioneImmobile ;
+                                 rdfs:label "ha stato di occupazione"@it ,
+                                            "has occupation status"@en .
 
-StateProperty:TipoDiAccessoImmobile a owl:Class ;
-    rdfs:label "Tipo di accesso immobile"@it .
 
-StateProperty:TipoStatoDiAgibilitaImmobile a owl:Class ;
-    rdfs:label "Tipo stato di agibilità immobile"@it .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/haTipoAccesso
+StateProperty:haTipoAccesso rdf:type owl:ObjectProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain StateProperty:StatoBeneImmobile ;
+                            rdfs:range StateProperty:TipoAccessoImmobile ;
+                            rdfs:label "ha tipo di accesso"@it ,
+                                       "has access type"@en .
 
-StateProperty:TipoStatoDiOccupazioneImmobile a owl:Class ;
-    rdfs:label "Tipo stato di occupazione immobile"@it .
 
-TI:TimeIndexedEvent a owl:Class .
+###  https://w3id.org/italia/real-estate/onto/StateProperty/riferisceProvincia
+StateProperty:riferisceProvincia rdf:type owl:ObjectProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain StateProperty:SchedaCatalogazioneBene ;
+                                 rdfs:range CLV:Province ;
+                                 rdfs:label "related to province"@en ,
+                                            "riferisce provincia"@it .
 
-[] a owl:Class ;
-    rdfs:subClassOf StateProperty:BeneImmobileDelloStato ;
-    owl:unionOf (
-            StateProperty:Area
-            StateProperty:Fabbricato ) .
 
-### Serialized using the ttlser deterministic serializer v1.2.0
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/avvisoSchedaProvvisoria
+StateProperty:avvisoSchedaProvvisoria rdf:type owl:DatatypeProperty ,
+                                               owl:FunctionalProperty ;
+                                      rdfs:domain StateProperty:SchedaCatalogazioneBene ;
+                                      rdfs:range xsd:boolean ;
+                                      rdfs:label "avviso scheda provvisoria"@it ,
+                                                 "provisional record notice"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/codiceSchedaCatalogazione
+StateProperty:codiceSchedaCatalogazione rdf:type owl:DatatypeProperty ,
+                                                 owl:FunctionalProperty ;
+                                        rdfs:domain StateProperty:SchedaCatalogazioneBene ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:label "cataloguing record code"@en ,
+                                                   "codice scheda catalogazione"@it .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/italia/onto/CLV/Identifier
+CLV:Identifier rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/CLV/Province
+CLV:Province rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/onto/TI/TimeIndexedEvent
+TI:TimeIndexedEvent rdf:type owl:Class .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/BeneImmobileDelloStato
+StateProperty:BeneImmobileDelloStato rdf:type owl:Class ;
+                                     rdfs:subClassOf StateProperty:Cespite ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty CLV:hasSpatialCoverage ;
+                                                       owl:someValuesFrom owl:Thing
+                                                     ] ;
+                                     rdfs:comment """Bene immobile (812 c.c.), appartenente allo Stato, assoggettato ai regimi giuridici previsti dal Codice Civile e dalle leggi speciali vigenti.
+I beni immobili dello Stato, in gestione all’Agenzia del Demanio, si classificano in:
+• Beni patrimoniali immobili indisponibili: beni immobili appartenenti allo Stato non rientranti nella categoria dei beni demaniali (art. 826 ss.c.c.).
+• Beni immobili patrimoniali disponibili: tutti i beni immobili di proprietà dello Stato diversi dai beni demaniali e patrimoniali indisponibili (art. 828 c.c.).
+Per quanto concerne i beni demaniali (art. 822 c.c.), la gestione dell’Agenzia del Demanio è riferita unicamente a quelli d'interesse storico / artistico non già in gestione al Ministero per i Beni Culturali."""@it ,
+                                                  """Real estate (Article 812 of the Italian Civil Code) belonging to the State, subject to the legal regimes established by the Civil Code and applicable special laws.
+State-owned real estate, managed by the State Property Agency, is classified as follows:
+• Unavailable immovable assets: real estate belonging to the State that does not fall within the category of state-owned property (Article 826 et seq. of the Italian Civil Code).
+• Available immovable assets: all real estate owned by the State other than state-owned property and unavailable patrimonial property (Article 828 of the Italian Civil Code).
+With regard to state-owned property (Article 822 of the Italian Civil Code), the management of the State Property Agency refers solely to those of historical/artistic interest not already managed by the Ministry of Cultural Heritage."""@en ;
+                                     rdfs:label "Bene immobile dello Stato"@it ,
+                                                "State Real Estate Asset"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile
+StateProperty:CategoriaBeneImmobile rdf:type owl:Class ;
+                                    rdfs:comment """Tipologia di beni pubblici gestiti dall’Agenzia del Demanio:
+- Beni Patrimoniali
+- Demanio Artistico-Storico non in gestione al Ministero per i beni culturali
+- Beni non di proprietà dello stato su cui lo Stato vanta diritti reali."""@it ,
+                                                 """Types of public assets managed by the State Property Agency:
+- Heritage Assets
+- Artistic-Historical State Property not managed by the Ministry of Cultural Heritage
+- Non-state-owned assets over which the State holds real rights."""@en ;
+                                    rdfs:label "Categoria di bene immobile dello Stato"@it ,
+                                               "State Real Estate Asset Category"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/Cespite
+StateProperty:Cespite rdf:type owl:Class ;
+                      rdfs:comment "A tangible or intangible item of a durable nature, monetizable and subject to depreciation"@en ,
+                                   "Bene materiale/immateriale di natura durevole nel tempo, monetizzabile e ammortizzabile."@it ;
+                      rdfs:label "Asset"@en ,
+                                 "Cespite"@it .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSEC
+StateProperty:CodiceMEFRaccordoSEC rdf:type owl:Class ;
+                                   rdfs:subClassOf CLV:Identifier ;
+                                   rdfs:comment "Asset classification adopted by the Ministry of Economy and Finance (MEF) to align with the classification of assets and liabilities defined in the European System of Accounts (ESA ’95)."@en ,
+                                                "Classificazione patrimoniale adottata dal MEF per conformarsi alla classificazione delle poste attive e passive riportate nel SEC ’95 (Reg. (CE) 2223/96; Decreto Interministeriale 18 Aprile 2002; Circolare MEF – Ragioneria Generale dello Stato n. 13 del 3 aprile 2003; D. Lgs. 279/1997)."@it ;
+                                   rdfs:label "Codice MEF di raccordo SEC"@it ,
+                                              "MEF Bridging Code for ESA"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile
+StateProperty:CodiceMEFRaccordoSECBeneImmobile rdf:type owl:Class ;
+                                               rdfs:subClassOf StateProperty:CodiceMEFRaccordoSEC ;
+                                               rdfs:comment "Asset classification of real estate adopted by the Ministry of the Economy and Finance to comply with the classification of assets and liabilities reported in the ESA '95 (Reg. (EC) 2223/96; Interministerial Decree 18 April 2002; MEF – State General Accounting Office Circular no. 13 of 3 April 2003; Legislative Decree 279/1997)."@en ,
+                                                            "Classificazione patrimoniale dei beni immobili adottata dal MEF per conformarsi alla classificazione delle poste attive e passive riportate nel SEC ’95 (Reg. (CE) 2223/96; Decreto Interministeriale 18 Aprile 2002; Circolare MEF – Ragioneria Generale dello Stato n. 13 del 3 aprile 2003; D. Lgs. 279/1997)."@it ;
+                                               rdfs:label "Codice MEF di raccordo SEC per bene immobile"@it ,
+                                                          "MEF Bridging Code for ESA - real estate"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/Fabbricato
+StateProperty:Fabbricato rdf:type owl:Class ;
+                         owl:disjointWith StateProperty:Terreno ;
+                         rdfs:comment "Bene immobile inteso come qualsiasi costruzione coperta, isolata da vie o da spazi vuoti, oppure separata da altre costruzioni medianti muri che si elevano, senza soluzione di continuità, dalle fondamenta al tetto, che disponga di uno o più liberi accessi sulla via, e possa avere una o più scale autonome (art. 812 c.c)."@it ,
+                                      "Real estate is understood as any covered building, isolated from streets or empty spaces, or separated from other buildings by walls that rise seamlessly from the foundations to the roof, which has one or more free accesses from the street, and can have one or more independent staircases (art. 812 of the Civil Code)."@en ;
+                         rdfs:label "Building"@en ,
+                                    "Fabbricato"@it .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene
+StateProperty:SchedaCatalogazioneBene rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty StateProperty:haCategoriaBene ;
+                                                            owl:someValuesFrom owl:Thing
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty StateProperty:riferisceProvincia ;
+                                                            owl:someValuesFrom owl:Thing
+                                                          ] ;
+                                      rdfs:comment """La scheda rappresenta l’unità base di catalogazione e può contenere uno o più beni immobili, qualora questi risultino:
+•  Fisicamente contigui (ad esempio, più edifici all’interno di un medesimo compendio);
+•  Funzionalmente integrati (ad esempio, strutture che operano congiuntamente per finalità istituzionali o operative);
+•  Gestiti unitariamente ai fini amministrativi, contabili o patrimoniali."""@it ,
+                                                   """The record represents the basic cataloging unit and may contain one or more real estate properties, provided they are:
+• Physically contiguous (for example, multiple buildings within the same complex);
+• Functionally integrated (for example, structures that operate jointly for institutional or operational purposes);
+• Managed jointly for administrative, accounting, or asset management purposes."""@en ;
+                                      rdfs:label "Scheda di catalogazione del bene dello Stato"@it ,
+                                                 "State Asset Cataloguing Record"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile
+StateProperty:StatoBeneImmobile rdf:type owl:Class ;
+                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                      owl:onProperty [ owl:inverseOf StateProperty:haStatoDelBeneImmobile
+                                                                     ] ;
+                                                      owl:someValuesFrom owl:Thing
+                                                    ] ;
+                                rdfs:subClassOf TI:TimeIndexedEvent ;
+                                rdfs:comment "Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile pubblico in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile."@it ,
+                                             "Legal, administrative, or functional condition of a public real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property."@en ;
+                                rdfs:label "Stato del Bene immobile dello Stato"@it ,
+                                           "Status of State Real Estate"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/Terreno
+StateProperty:Terreno rdf:type owl:Class ;
+                      rdfs:comment "Bene immobile inteso come porzione di suolo priva di edificazioni (art. 812 c.c.) cui viene assegnata una particolare destinazione d’uso sulla base delle norme e degli strumenti urbanistici vigenti."@it ,
+                                   "Real estate defined as a portion of privately owned land (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments."@en ;
+                      rdfs:label "Land"@en ,
+                                 "Terreno"@it .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile
+StateProperty:TipoAccessoImmobile rdf:type owl:Class ;
+                                  rdfs:comment "La tipologia di accesso di un cespite immobiliare rappresenta la modalità fisica e funzionale attraverso cui è possibile accedere all’unità immobiliare o all’area. Essa descrive le caratteristiche dell’accessibilità in relazione alla destinazione d’uso, alla configurazione dell’immobile e alla sua fruibilità da parte di utenti, enti o soggetti terzi."@it ,
+                                               "The access type of a real estate asset represents the physical and functional means by which the property or area can be accessed. It describes the accessibility characteristics in relation to the intended use, the property's configuration, and its usability by users, entities, or third parties."@en ;
+                                  rdfs:label "Tipo di accesso a immobile dello Stato"@it ,
+                                             "Type of State Real Estate Access"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile
+StateProperty:TipoCategoriaPatrimonialeImmobile rdf:type owl:Class ;
+                                                rdfs:comment """Tipologia di beni immobili pubblici gestiti dall’Agenzia del Demanio:
+• beni disponibili
+• beni assegnati in uso governativo
+• beni indisponibili
+• beni su cui gravano dir. reali a favore terzi
+• diritti reali su beni patrimoniali
+• dir. reali su beni di proprietà di comuni
+• dir. reali su beni di proprietà di provincie
+• dir. reali su beni di proprietà di regioni
+• beni di demanio culturale non in gestione al Ministero per i beni culturali"""@it ,
+                                                             """Types of public real estate managed by the State Property Agency:
+• available assets
+• assets assigned for government use
+• unavailable assets
+• assets subject to third-party real estate rights
+• real estate rights on assets
+• real estate rights on assets owned by municipalities
+• real estate rights on assets owned by provinces
+• real estate rights on assets owned by regions
+• cultural state-owned assets not managed by the Ministry of Cultural Heritage"""@en ;
+                                                rdfs:label "Tipo di categoria patrimoniale immobile dello Stato"@it ,
+                                                           "Type of State Real Estate Asset Category"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile
+StateProperty:TipoDestinazioneUsoImmobile rdf:type owl:Class ;
+                                          rdfs:comment "Classification of state-owned buildings based on their intended use, in accordance with current legislation and urban planning tools (Article 23-ter of Presidential Decree No. 380 of June 6, 2001 - Consolidated Building Act; Legislative Decree No. 652 of April 13, 1939; Presidential Decree No. 1142 of December 1949; Legislative Decree No. 200 of December 22, 2008, converted with amendments by Law No. 9 of February 18, 2009)."@en ,
+                                                       "Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9."@it ;
+                                          rdfs:label "Tipo di destinazione di uso degli immobili dello Stato"@it ,
+                                                     "Type of designation for State Real Estates"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile
+StateProperty:TipoStatoAgibilitàImmobile rdf:type owl:Class ;
+                                         rdfs:comment "Existence of safety, hygiene, health, and energy-saving conditions for buildings and their installations, and, where applicable, compliance with digital infrastructure requirements assessed in accordance with current legislation (Article 24 of Presidential Decree 380/2001)."@en ,
+                                                      "Sussistenza delle condizioni di sicurezza, igiene, salubrità, risparmio energetico degli edifici e degli impianti negli stessi installati, e, ove previsto, di rispetto degli obblighi di infrastrutturazione digitale valutate secondo quanto dispone la normativa vigente (art. 24 DPR 380/2001)."@it ;
+                                         rdfs:label "Tipo di stato di agibilità immobile dello Stato"@it ,
+                                                    "Type of State Real Estate Habitability Status"@en .
+
+
+###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile
+StateProperty:TipoStatoOccupazioneImmobile rdf:type owl:Class ;
+                                           rdfs:comment "Indica la disponibilità giuridica e/o fisica degli immobili pubblici da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti."@it ,
+                                                        "Indicates the legal and/or physical availability of public properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws."@en ;
+                                           rdfs:label "Tipo di stato di occupazione di immobile dello Stato"@it ,
+                                                      "Type of State Real Estate Occupancy Status"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Class ;
+  owl:unionOf ( StateProperty:Fabbricato
+                StateProperty:Terreno
+              ) ;
+  rdfs:subClassOf StateProperty:BeneImmobileDelloStato
+] .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

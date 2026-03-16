@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <graphol version="3">
   <project version="0.1" name="StateProperty">
-    <ontology prefix="StateProperty" addLabelFromUserInput="1" addLabelFromSimpleName="0" lang="it" iri="https://w3id.org/italia/real-estate/onto/StateProperty/">
+    <ontology lang="it" iri="https://w3id.org/italia/real-estate/onto/StateProperty/" addLabelFromUserInput="1" addLabelFromSimpleName="0" prefix="StateProperty">
       <imports/>
       <prefixes>
         <prefix>
@@ -25,6 +25,10 @@
           <namespace>https://w3id.org/italia/onto/RO/</namespace>
         </prefix>
         <prefix>
+          <value>StateProperty</value>
+          <namespace>https://w3id.org/italia/real-estate/onto/StateProperty/</namespace>
+        </prefix>
+        <prefix>
           <value>TI</value>
           <namespace>https://w3id.org/italia/onto/TI/</namespace>
         </prefix>
@@ -35,10 +39,6 @@
         <prefix>
           <value>countries</value>
           <namespace>http://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/</namespace>
-        </prefix>
-        <prefix>
-          <value>StateProperty</value>
-          <namespace>https://w3id.org/italia/real-estate/onto/StateProperty/</namespace>
         </prefix>
         <prefix>
           <value>owl</value>
@@ -329,20 +329,6 @@
           <value>https://w3id.org/italia/real-estate/onto/StateProperty/</value>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/Area</value>
-          <annotations>
-            <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Area</subject>
-              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
-              <object>
-                <lexicalForm>Area</lexicalForm>
-                <datatype/>
-                <language>it</language>
-              </object>
-            </annotation>
-          </annotations>
-        </iri>
-        <iri>
           <value>https://w3id.org/italia/real-estate/onto/StateProperty/BeneImmobileDelloStato</value>
           <annotations>
             <annotation>
@@ -354,18 +340,86 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/BeneImmobileDelloStato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>State Real Estate Asset</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/BeneImmobileDelloStato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Bene immobile (812 c.c.), appartenente allo Stato, assoggettato ai regimi giuridici previsti dal Codice Civile e dalle leggi speciali vigenti.
+I beni immobili dello Stato, in gestione all’Agenzia del Demanio, si classificano in:
+• Beni patrimoniali immobili indisponibili: beni immobili appartenenti allo Stato non rientranti nella categoria dei beni demaniali (art. 826 ss.c.c.).
+• Beni immobili patrimoniali disponibili: tutti i beni immobili di proprietà dello Stato diversi dai beni demaniali e patrimoniali indisponibili (art. 828 c.c.).
+Per quanto concerne i beni demaniali (art. 822 c.c.), la gestione dell’Agenzia del Demanio è riferita unicamente a quelli d'interesse storico / artistico non già in gestione al Ministero per i Beni Culturali.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/BeneImmobileDelloStato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Real estate (Article 812 of the Italian Civil Code) belonging to the State, subject to the legal regimes established by the Civil Code and applicable special laws.
+State-owned real estate, managed by the State Property Agency, is classified as follows:
+• Unavailable immovable assets: real estate belonging to the State that does not fall within the category of state-owned property (Article 826 et seq. of the Italian Civil Code).
+• Available immovable assets: all real estate owned by the State other than state-owned property and unavailable patrimonial property (Article 828 of the Italian Civil Code).
+With regard to state-owned property (Article 822 of the Italian Civil Code), the management of the State Property Agency refers solely to those of historical/artistic interest not already managed by the Ministry of Cultural Heritage.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneDelloStato</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneDelloStato</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Categoria bene dello Stato</lexicalForm>
+                <lexicalForm>Categoria di bene immobile dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>State Real Estate Asset Category</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Tipologia di beni pubblici gestiti dall’Agenzia del Demanio:
+- Beni Patrimoniali
+- Demanio Artistico-Storico non in gestione al Ministero per i beni culturali
+- Beni non di proprietà dello stato su cui lo Stato vanta diritti reali.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Types of public assets managed by the State Property Agency:
+- Heritage Assets
+- Artistic-Historical State Property not managed by the Ministry of Cultural Heritage
+- Non-state-owned assets over which the State holds real rights.</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
@@ -382,6 +436,33 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Cespite</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Asset</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Cespite</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Bene materiale/immateriale di natura durevole nel tempo, monetizzabile e ammortizzabile.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Cespite</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>A tangible or intangible item of a durable nature, monetizable and subject to depreciation</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
@@ -391,23 +472,77 @@
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSEC</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Codice MEF raccordo SEC</lexicalForm>
+                <lexicalForm>Codice MEF di raccordo SEC</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>MEF Bridging Code for ESA</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Classificazione patrimoniale adottata dal MEF per conformarsi alla classificazione delle poste attive e passive riportate nel SEC ’95 (Reg. (CE) 2223/96; Decreto Interministeriale 18 Aprile 2002; Circolare MEF – Ragioneria Generale dello Stato n. 13 del 3 aprile 2003; D. Lgs. 279/1997).</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Asset classification adopted by the Ministry of Economy and Finance (MEF) to align with the classification of assets and liabilities defined in the European System of Accounts (ESA ’95).</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECImmobile</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECImmobile</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Codice MEF raccordo SEC bene immobile</lexicalForm>
+                <lexicalForm>Codice MEF di raccordo SEC per bene immobile</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>MEF Bridging Code for ESA - real estate</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Classificazione patrimoniale dei beni immobili adottata dal MEF per conformarsi alla classificazione delle poste attive e passive riportate nel SEC ’95 (Reg. (CE) 2223/96; Decreto Interministeriale 18 Aprile 2002; Circolare MEF – Ragioneria Generale dello Stato n. 13 del 3 aprile 2003; D. Lgs. 279/1997).</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Asset classification of real estate adopted by the Ministry of the Economy and Finance to comply with the classification of assets and liabilities reported in the ESA '95 (Reg. (EC) 2223/96; Interministerial Decree 18 April 2002; MEF – State General Accounting Office Circular no. 13 of 3 April 2003; Legislative Decree 279/1997).</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
@@ -424,32 +559,201 @@
                 <language>it</language>
               </object>
             </annotation>
-          </annotations>
-        </iri>
-        <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaDiCatalogazione</value>
-          <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaDiCatalogazione</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Fabbricato</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Scheda di catalogazione</lexicalForm>
+                <lexicalForm>Building</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Fabbricato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Bene immobile inteso come qualsiasi costruzione coperta, isolata da vie o da spazi vuoti, oppure separata da altre costruzioni medianti muri che si elevano, senza soluzione di continuità, dalle fondamenta al tetto, che disponga di uno o più liberi accessi sulla via, e possa avere una o più scale autonome (art. 812 c.c).</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Fabbricato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Real estate is understood as any covered building, isolated from streets or empty spaces, or separated from other buildings by walls that rise seamlessly from the foundations to the roof, which has one or more free accesses from the street, and can have one or more independent staircases (art. 812 of the Civil Code).</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/StatoDelBeneImmobileDelloStato</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoDelBeneImmobileDelloStato</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Scheda di catalogazione del bene dello Stato</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>State Asset Cataloguing Record</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La scheda rappresenta l’unità base di catalogazione e può contenere uno o più beni immobili, qualora questi risultino:
+•  Fisicamente contigui (ad esempio, più edifici all’interno di un medesimo compendio);
+•  Funzionalmente integrati (ad esempio, strutture che operano congiuntamente per finalità istituzionali o operative);
+•  Gestiti unitariamente ai fini amministrativi, contabili o patrimoniali.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The record represents the basic cataloging unit and may contain one or more real estate properties, provided they are:
+• Physically contiguous (for example, multiple buildings within the same complex);
+• Functionally integrated (for example, structures that operate jointly for institutional or operational purposes);
+• Managed jointly for administrative, accounting, or asset management purposes.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>Stato del Bene immobile dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Status of State Real Estate</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile pubblico in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Legal, administrative, or functional condition of a public real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Terreno</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Land</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Bene immobile inteso come porzione di suolo priva di edificazioni (art. 812 c.c.) cui viene assegnata una particolare destinazione d’uso sulla base delle norme e degli strumenti urbanistici vigenti.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Real estate defined as a portion of privately owned land (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Tipo di accesso a immobile dello Stato</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Type of State Real Estate Access</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La tipologia di accesso di un cespite immobiliare rappresenta la modalità fisica e funzionale attraverso cui è possibile accedere all’unità immobiliare o all’area. Essa descrive le caratteristiche dell’accessibilità in relazione alla destinazione d’uso, alla configurazione dell’immobile e alla sua fruibilità da parte di utenti, enti o soggetti terzi.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The access type of a real estate asset represents the physical and functional means by which the property or area can be accessed. It describes the accessibility characteristics in relation to the intended use, the property's configuration, and its usability by users, entities, or third parties.</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
@@ -461,65 +765,177 @@
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Tipo categoria patrimoniale immobile</lexicalForm>
+                <lexicalForm>Tipo di categoria patrimoniale immobile dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Type of State Real Estate Asset Category</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Tipologia di beni immobili pubblici gestiti dall’Agenzia del Demanio:
+• beni disponibili
+• beni assegnati in uso governativo
+• beni indisponibili
+• beni su cui gravano dir. reali a favore terzi
+• diritti reali su beni patrimoniali
+• dir. reali su beni di proprietà di comuni
+• dir. reali su beni di proprietà di provincie
+• dir. reali su beni di proprietà di regioni
+• beni di demanio culturale non in gestione al Ministero per i beni culturali</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Types of public real estate managed by the State Property Agency:
+• available assets
+• assets assigned for government use
+• unavailable assets
+• assets subject to third-party real estate rights
+• real estate rights on assets
+• real estate rights on assets owned by municipalities
+• real estate rights on assets owned by provinces
+• real estate rights on assets owned by regions
+• cultural state-owned assets not managed by the Ministry of Cultural Heritage</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneDiUsoImmobile</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneDiUsoImmobile</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Tipo destinazione di uso immobile</lexicalForm>
+                <lexicalForm>Tipo di destinazione di uso degli immobili dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Type of designation for State Real Estates</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Classification of state-owned buildings based on their intended use, in accordance with current legislation and urban planning tools (Article 23-ter of Presidential Decree No. 380 of June 6, 2001 - Consolidated Building Act; Legislative Decree No. 652 of April 13, 1939; Presidential Decree No. 1142 of December 1949; Legislative Decree No. 200 of December 22, 2008, converted with amendments by Law No. 9 of February 18, 2009).</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDiAccessoImmobile</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDiAccessoImmobile</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Tipo di accesso immobile</lexicalForm>
+                <lexicalForm>Tipo di stato di agibilità immobile dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Type of State Real Estate Habitability Status</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Sussistenza delle condizioni di sicurezza, igiene, salubrità, risparmio energetico degli edifici e degli impianti negli stessi installati, e, ove previsto, di rispetto degli obblighi di infrastrutturazione digitale valutate secondo quanto dispone la normativa vigente (art. 24 DPR 380/2001).</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Existence of safety, hygiene, health, and energy-saving conditions for buildings and their installations, and, where applicable, compliance with digital infrastructure requirements assessed in accordance with current legislation (Article 24 of Presidential Decree 380/2001).</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoDiAgibilitaImmobile</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoDiAgibilitaImmobile</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Tipo stato di agibilità immobile</lexicalForm>
+                <lexicalForm>Tipo di stato di occupazione di immobile dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
               </object>
             </annotation>
-          </annotations>
-        </iri>
-        <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoDiOccupazioneImmobile</value>
-          <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoDiOccupazioneImmobile</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>Tipo stato di occupazione immobile</lexicalForm>
+                <lexicalForm>Type of State Real Estate Occupancy Status</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indica la disponibilità giuridica e/o fisica degli immobili pubblici da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti.</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indicates the legal and/or physical availability of public properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws.</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
@@ -537,6 +953,15 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/avvisoSchedaProvvisoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>provisional record notice</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
@@ -552,19 +977,37 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/codiceSchedaCatalogazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>cataloguing record code</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBeneDelloStato</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBene</value>
           <functional/>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBeneDelloStato</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBene</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>ha categoria bene dello Stato</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBene</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has category State Property</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
@@ -582,6 +1025,15 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaPatrimoniale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has asset category</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
@@ -597,14 +1049,23 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haCodiceSEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has ESA code</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneDiUso</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneUso</value>
           <functional/>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneDiUso</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneUso</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>ha destinazione di uso</lexicalForm>
@@ -612,13 +1073,22 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneUso</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has designed use</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaDiCatalogazione</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaCatalogazione</value>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaDiCatalogazione</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaCatalogazione</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>ha scheda di catalogazione</lexicalForm>
@@ -626,29 +1096,23 @@
                 <language>it</language>
               </object>
             </annotation>
-          </annotations>
-        </iri>
-        <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobileDelloStato</value>
-          <inverseFunctional/>
-          <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobileDelloStato</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaCatalogazione</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
-                <lexicalForm>ha stato del bene immobile dello Stato</lexicalForm>
+                <lexicalForm>has a catalog record</lexicalForm>
                 <datatype/>
-                <language>it</language>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDiAgibilità</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoAgibilità</value>
           <functional/>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDiAgibilità</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoAgibilità</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>ha stato di agibilità</lexicalForm>
@@ -656,14 +1120,47 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoAgibilità</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has status of habitability</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDiOccupazione</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobile</value>
+          <inverseFunctional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ha stato del bene immobile dello Stato</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobile</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has status the property real-estate</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoOccupazione</value>
           <functional/>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDiOccupazione</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoOccupazione</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>ha stato di occupazione</lexicalForm>
@@ -671,19 +1168,37 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoOccupazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has occupation status</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoDiAccesso</value>
+          <value>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoAccesso</value>
           <functional/>
           <annotations>
             <annotation>
-              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoDiAccesso</subject>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoAccesso</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#label</property>
               <object>
                 <lexicalForm>ha tipo di accesso</lexicalForm>
                 <datatype/>
                 <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoAccesso</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has access type</lexicalForm>
+                <datatype/>
+                <language>en</language>
               </object>
             </annotation>
           </annotations>
@@ -701,525 +1216,531 @@
                 <language>it</language>
               </object>
             </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/real-estate/onto/StateProperty/riferisceProvincia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>related to province</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
           </annotations>
-        </iri>
-        <iri>
-          <value>urn:x-graphol:origin</value>
         </iri>
       </iris>
     </ontology>
     <diagrams>
-      <diagram height="5000" name="bene immobile" width="5000">
-        <node type="range-restriction" id="n10" color="#000000">
-          <geometry x="350" y="80" height="20" width="20"/>
-          <label x="350" y="100" height="23" customSize="0" size="12" width="39">exists</label>
+      <diagram name="bene immobile" width="5000" height="5000">
+        <node type="range-restriction" color="#000000" id="n10">
+          <geometry y="80" x="350" height="20" width="20"/>
+          <label size="12" y="100" x="350" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n12" color="#fcfcfc">
-          <geometry x="460" y="420" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneDiUsoImmobile</iri>
-          <label x="460" y="420" height="38" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n12">
+          <geometry y="430" x="460" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</iri>
+          <label size="12" y="430" x="460" customSize="0" height="50" width="110"/>
         </node>
-        <node type="role" id="n13" color="#fcfcfc">
-          <geometry x="460" y="250" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneDiUso</iri>
-          <label x="460" y="220" height="23" customSize="0" size="12" width="127"/>
+        <node type="role" color="#fcfcfc" id="n13">
+          <geometry y="270" x="460" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haDestinazioneUso</iri>
+          <label size="12" y="240" x="460" customSize="0" height="22" width="190"/>
         </node>
-        <node type="domain-restriction" id="n14" color="#fcfcfc">
-          <geometry x="460" y="170" height="20" width="20"/>
-          <label x="490" y="170" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n14">
+          <geometry y="180" x="460" height="20" width="20"/>
+          <label size="12" y="180" x="490" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n15" color="#000000">
-          <geometry x="460" y="320" height="20" width="20"/>
-          <label x="490" y="320" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n15">
+          <geometry y="340" x="460" height="20" width="20"/>
+          <label size="12" y="340" x="490" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n16" color="#fcfcfc">
-          <geometry x="500" y="-100" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n16">
+          <geometry y="-100" x="500" height="50" width="110"/>
           <iri>https://w3id.org/italia/onto/TI/TimeIndexedEvent</iri>
-          <label x="500" y="-100" height="38" customSize="0" size="12" width="110"/>
+          <label size="12" y="-100" x="500" customSize="0" height="36" width="110"/>
         </node>
-        <node type="concept" id="n17" color="#fcfcfc">
-          <geometry x="-670" y="80" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n17">
+          <geometry y="80" x="-670" height="50" width="110"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSEC</iri>
-          <label x="-670" y="80" height="38" customSize="0" size="12" width="110"/>
+          <label size="12" y="80" x="-670" customSize="0" height="50" width="110"/>
         </node>
-        <node type="role" id="n18" color="#fcfcfc">
-          <geometry x="-250" y="80" height="50" width="70"/>
+        <node type="role" color="#fcfcfc" id="n18">
+          <geometry y="80" x="-250" height="50" width="70"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haCodiceSEC</iri>
-          <label x="-250" y="45" height="23" customSize="0" size="12" width="84"/>
+          <label size="12" y="45" x="-250" customSize="0" height="22" width="158"/>
         </node>
-        <node type="concept" id="n2" color="#fcfcfc">
-          <geometry x="-10" y="80" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n2">
+          <geometry y="80" x="-10" height="50" width="110"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/BeneImmobileDelloStato</iri>
-          <label x="-10" y="80" height="38" customSize="0" size="12" width="110"/>
+          <label size="12" y="80" x="-10" customSize="0" height="50" width="110"/>
         </node>
-        <node type="domain-restriction" id="n21" color="#fcfcfc">
-          <geometry x="-150" y="80" height="20" width="20"/>
-          <label x="-150" y="58" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n21">
+          <geometry y="80" x="-150" height="20" width="20"/>
+          <label size="12" y="58" x="-150" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n22" color="#000000">
-          <geometry x="-350" y="80" height="20" width="20"/>
-          <label x="-350" y="58" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n22">
+          <geometry y="80" x="-350" height="20" width="20"/>
+          <label size="12" y="58" x="-350" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n23" color="#fcfcfc">
-          <geometry x="-670" y="-80" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n23">
+          <geometry y="-80" x="-670" height="50" width="110"/>
           <iri>https://w3id.org/italia/onto/CLV/Identifier</iri>
-          <label x="-670" y="-80" height="23" customSize="0" size="12" width="110"/>
+          <label size="12" y="-80" x="-670" customSize="0" height="22" width="110"/>
         </node>
-        <node type="concept" id="n34" color="#fcfcfc">
-          <geometry x="620" y="420" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoDiOccupazioneImmobile</iri>
-          <label x="620" y="420" height="53" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n34">
+          <geometry y="430" x="660" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</iri>
+          <label size="12" y="430" x="660" customSize="0" height="50" width="110"/>
         </node>
-        <node type="role" id="n35" color="#fcfcfc">
-          <geometry x="620" y="260" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDiOccupazione</iri>
-          <label x="620" y="225" height="23" customSize="0" size="12" width="134"/>
+        <node type="role" color="#fcfcfc" id="n35">
+          <geometry y="270" x="660" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoOccupazione</iri>
+          <label size="12" y="235" x="660" customSize="0" height="22" width="198"/>
         </node>
-        <node type="concept" id="n36" color="#fcfcfc">
-          <geometry x="790" y="420" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoDiAgibilitaImmobile</iri>
-          <label x="790" y="420" height="38" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n36">
+          <geometry y="430" x="870" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoAgibilitàImmobile</iri>
+          <label size="12" y="430" x="870" customSize="0" height="50" width="110"/>
         </node>
-        <node type="role" id="n37" color="#fcfcfc">
-          <geometry x="790" y="260" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDiAgibilità</iri>
-          <label x="790" y="230" height="23" customSize="0" size="12" width="108"/>
+        <node type="role" color="#fcfcfc" id="n37">
+          <geometry y="270" x="870" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoAgibilità</iri>
+          <label size="12" y="240" x="870" customSize="0" height="22" width="173"/>
         </node>
-        <node type="concept" id="n38" color="#fcfcfc">
-          <geometry x="960" y="420" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDiAccessoImmobile</iri>
-          <label x="960" y="420" height="38" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n38">
+          <geometry y="430" x="1050" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile</iri>
+          <label size="12" y="430" x="1050" customSize="0" height="36" width="110"/>
         </node>
-        <node type="role" id="n39" color="#fcfcfc">
-          <geometry x="960" y="260" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoDiAccesso</iri>
-          <label x="960" y="230" height="23" customSize="0" size="12" width="104"/>
+        <node type="role" color="#fcfcfc" id="n39">
+          <geometry y="270" x="1050" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haTipoAccesso</iri>
+          <label size="12" y="240" x="1050" customSize="0" height="22" width="168"/>
         </node>
-        <node type="disjoint-union" id="n4" color="#000000">
-          <geometry x="-50" y="180" height="30" width="50"/>
+        <node type="disjoint-union" color="#000000" id="n4">
+          <geometry y="180" x="-50" height="30" width="50"/>
         </node>
-        <node type="domain-restriction" id="n40" color="#fcfcfc">
-          <geometry x="620" y="170" height="20" width="20"/>
-          <label x="650" y="170" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n40">
+          <geometry y="180" x="660" height="20" width="20"/>
+          <label size="12" y="180" x="690" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n41" color="#000000">
-          <geometry x="620" y="320" height="20" width="20"/>
-          <label x="650" y="320" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n41">
+          <geometry y="340" x="660" height="20" width="20"/>
+          <label size="12" y="340" x="690" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="domain-restriction" id="n42" color="#fcfcfc">
-          <geometry x="790" y="180" height="20" width="20"/>
-          <label x="820" y="180" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n42">
+          <geometry y="180" x="870" height="20" width="20"/>
+          <label size="12" y="180" x="900" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n43" color="#000000">
-          <geometry x="790" y="330" height="20" width="20"/>
-          <label x="825" y="330" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n43">
+          <geometry y="340" x="870" height="20" width="20"/>
+          <label size="12" y="340" x="905" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="domain-restriction" id="n44" color="#fcfcfc">
-          <geometry x="960" y="180" height="20" width="20"/>
-          <label x="995" y="180" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n44">
+          <geometry y="180" x="1050" height="20" width="20"/>
+          <label size="12" y="180" x="1085" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n45" color="#000000">
-          <geometry x="960" y="330" height="20" width="20"/>
-          <label x="990" y="325" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n45">
+          <geometry y="340" x="1050" height="20" width="20"/>
+          <label size="12" y="335" x="1080" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="attribute" id="n46" color="#fcfcfc">
-          <geometry x="200" y="440" height="20" width="20"/>
+        <node type="attribute" color="#fcfcfc" id="n46">
+          <geometry y="440" x="230" height="20" width="20"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/codiceSchedaCatalogazione</iri>
-          <label x="215" y="420" height="23" customSize="0" size="12" width="162"/>
+          <label size="12" y="420" x="245" customSize="0" height="22" width="239"/>
         </node>
-        <node type="domain-restriction" id="n47" color="#fcfcfc">
-          <geometry x="120" y="440" height="20" width="20"/>
-          <label x="120" y="460" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n47">
+          <geometry y="440" x="120" height="20" width="20"/>
+          <label size="12" y="460" x="120" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n48" color="#fcfcfc">
-          <geometry x="-480" y="80" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECImmobile</iri>
-          <label x="-480" y="80" height="53" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n48">
+          <geometry y="80" x="-480" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/CodiceMEFRaccordoSECBeneImmobile</iri>
+          <label size="12" y="80" x="-480" customSize="0" height="50" width="110"/>
         </node>
-        <node type="concept" id="n49" color="#fcfcfc">
-          <geometry x="-10" y="-220" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n49">
+          <geometry y="-220" x="-10" height="50" width="110"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/Cespite</iri>
-          <label x="-10" y="-220" height="23" customSize="0" size="12" width="110"/>
+          <label size="12" y="-220" x="-10" customSize="0" height="36" width="110"/>
         </node>
-        <node type="concept" id="n5" color="#fcfcfc">
-          <geometry x="-340" y="270" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/Area</iri>
-          <label x="-340" y="270" height="23" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n5">
+          <geometry y="270" x="-340" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</iri>
+          <label size="12" y="270" x="-340" customSize="0" height="36" width="110"/>
         </node>
-        <node type="role" id="n51" color="#fcfcfc">
-          <geometry x="150" y="-100" height="50" width="70"/>
+        <node type="role" color="#fcfcfc" id="n51">
+          <geometry y="-100" x="150" height="50" width="70"/>
           <iri>https://w3id.org/italia/onto/CLV/hasSpatialCoverage</iri>
-          <label x="150" y="-135" height="23" customSize="0" size="12" width="137"/>
+          <label size="12" y="-135" x="150" customSize="0" height="22" width="141"/>
         </node>
-        <node type="domain-restriction" id="n52" color="#fcfcfc">
-          <geometry x="150" y="10" height="20" width="20"/>
-          <label x="185" y="5" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n52">
+          <geometry y="10" x="150" height="20" width="20"/>
+          <label size="12" y="5" x="185" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n54" color="#fcfcfc">
-          <geometry x="1120" y="420" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n54">
+          <geometry y="430" x="1250" height="50" width="110"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</iri>
-          <label x="1120" y="420" height="53" customSize="0" size="12" width="110"/>
+          <label size="12" y="430" x="1250" customSize="0" height="50" width="110"/>
         </node>
-        <node type="role" id="n55" color="#fcfcfc">
-          <geometry x="1120" y="260" height="50" width="70"/>
+        <node type="role" color="#fcfcfc" id="n55">
+          <geometry y="270" x="1250" height="50" width="70"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaPatrimoniale</iri>
-          <label x="1120" y="230" height="23" customSize="0" size="12" width="143"/>
+          <label size="12" y="240" x="1250" customSize="0" height="22" width="222"/>
         </node>
-        <node type="domain-restriction" id="n56" color="#fcfcfc">
-          <geometry x="1120" y="180" height="20" width="20"/>
-          <label x="1155" y="180" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n56">
+          <geometry y="170" x="1250" height="20" width="20"/>
+          <label size="12" y="170" x="1285" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n57" color="#000000">
-          <geometry x="1120" y="330" height="20" width="20"/>
-          <label x="1150" y="330" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n57">
+          <geometry y="340" x="1250" height="20" width="20"/>
+          <label size="12" y="340" x="1280" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n58" color="#fcfcfc">
-          <geometry x="0" y="460" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaDiCatalogazione</iri>
-          <label x="0" y="460" height="38" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n58">
+          <geometry y="460" x="0" height="55" width="125"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/SchedaCatalogazioneBene</iri>
+          <label size="12" y="455" x="0" customSize="0" height="36" width="125"/>
         </node>
-        <node type="role" id="n59" color="#fcfcfc">
-          <geometry x="0" y="260" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaDiCatalogazione</iri>
-          <label x="115" y="260" height="23" customSize="0" size="12" width="153"/>
+        <node type="role" color="#fcfcfc" id="n59">
+          <geometry y="260" x="0" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haSchedaCatalogazione</iri>
+          <label size="12" y="260" x="115" customSize="0" height="22" width="218"/>
         </node>
-        <node type="concept" id="n6" color="#fcfcfc">
-          <geometry x="-550" y="270" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n6">
+          <geometry y="270" x="-550" height="50" width="110"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/Fabbricato</iri>
-          <label x="-550" y="270" height="23" customSize="0" size="12" width="110"/>
+          <label size="12" y="270" x="-550" customSize="0" height="36" width="110"/>
         </node>
-        <node type="domain-restriction" id="n60" color="#fcfcfc">
-          <geometry x="0" y="180" height="20" width="20"/>
-          <label x="30" y="180" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n60">
+          <geometry y="180" x="0" height="20" width="20"/>
+          <label size="12" y="180" x="30" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n61" color="#000000">
-          <geometry x="0" y="340" height="20" width="20"/>
-          <label x="30" y="340" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n61">
+          <geometry y="340" x="0" height="20" width="20"/>
+          <label size="12" y="340" x="30" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n62" color="#fcfcfc">
-          <geometry x="0" y="760" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneDelloStato</iri>
-          <label x="0" y="760" height="38" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n62">
+          <geometry y="760" x="0" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</iri>
+          <label size="12" y="760" x="0" customSize="0" height="50" width="110"/>
         </node>
-        <node type="role" id="n63" color="#fcfcfc">
-          <geometry x="0" y="610" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBeneDelloStato</iri>
-          <label x="5" y="580" height="23" customSize="0" size="12" width="151"/>
+        <node type="role" color="#fcfcfc" id="n63">
+          <geometry y="610" x="0" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haCategoriaBene</iri>
+          <label size="12" y="580" x="5" customSize="0" height="22" width="178"/>
         </node>
-        <node type="domain-restriction" id="n64" color="#fcfcfc">
-          <geometry x="0" y="540" height="20" width="20"/>
-          <label x="-30" y="540" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n64">
+          <geometry y="540" x="0" height="20" width="20"/>
+          <label size="12" y="540" x="-30" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n65" color="#000000">
-          <geometry x="0" y="680" height="20" width="20"/>
-          <label x="-30" y="680" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n65">
+          <geometry y="680" x="0" height="20" width="20"/>
+          <label size="12" y="680" x="-30" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="attribute" id="n66" color="#fcfcfc">
-          <geometry x="200" y="480" height="20" width="20"/>
+        <node type="attribute" color="#fcfcfc" id="n66">
+          <geometry y="480" x="230" height="20" width="20"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/avvisoSchedaProvvisoria</iri>
-          <label x="220" y="460" height="23" customSize="0" size="12" width="145"/>
+          <label size="12" y="460" x="250" customSize="0" height="22" width="221"/>
         </node>
-        <node type="domain-restriction" id="n67" color="#fcfcfc">
-          <geometry x="120" y="480" height="20" width="20"/>
-          <label x="120" y="500" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n67">
+          <geometry y="480" x="120" height="20" width="20"/>
+          <label size="12" y="500" x="120" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="concept" id="n68" color="#fcfcfc">
-          <geometry x="-170" y="760" height="50" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n68">
+          <geometry y="760" x="-170" height="50" width="110"/>
           <iri>https://w3id.org/italia/onto/CLV/Province</iri>
-          <label x="-170" y="760" height="23" customSize="0" size="12" width="110"/>
+          <label size="12" y="760" x="-170" customSize="0" height="22" width="110"/>
         </node>
-        <node type="role" id="n69" color="#fcfcfc">
-          <geometry x="-170" y="610" height="50" width="70"/>
+        <node type="role" color="#fcfcfc" id="n69">
+          <geometry y="610" x="-170" height="50" width="70"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/riferisceProvincia</iri>
-          <label x="-170" y="580" height="23" customSize="0" size="12" width="102"/>
+          <label size="12" y="580" x="-170" customSize="0" height="22" width="178"/>
         </node>
-        <node type="concept" id="n7" color="#fcfcfc">
-          <geometry x="500" y="80" height="50" width="110"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/StatoDelBeneImmobileDelloStato</iri>
-          <label x="500" y="80" height="38" customSize="0" size="12" width="110"/>
+        <node type="concept" color="#fcfcfc" id="n7">
+          <geometry y="80" x="500" height="50" width="110"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</iri>
+          <label size="12" y="80" x="500" customSize="0" height="36" width="110"/>
         </node>
-        <node type="domain-restriction" id="n70" color="#fcfcfc">
-          <geometry x="-170" y="540" height="20" width="20"/>
-          <label x="-200" y="540" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n70">
+          <geometry y="540" x="-170" height="20" width="20"/>
+          <label size="12" y="540" x="-200" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="range-restriction" id="n71" color="#000000">
-          <geometry x="-170" y="680" height="20" width="20"/>
-          <label x="-200" y="680" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n71">
+          <geometry y="680" x="-170" height="20" width="20"/>
+          <label size="12" y="680" x="-200" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="role" id="n8" color="#fcfcfc">
-          <geometry x="250" y="80" height="50" width="70"/>
-          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobileDelloStato</iri>
-          <label x="250" y="45" height="23" customSize="0" size="12" width="200"/>
+        <node type="role" color="#fcfcfc" id="n8">
+          <geometry y="80" x="250" height="50" width="70"/>
+          <iri>https://w3id.org/italia/real-estate/onto/StateProperty/haStatoDelBeneImmobile</iri>
+          <label size="12" y="45" x="250" customSize="0" height="22" width="222"/>
         </node>
-        <node type="domain-restriction" id="n9" color="#fcfcfc">
-          <geometry x="150" y="80" height="20" width="20"/>
-          <label x="150" y="100" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="domain-restriction" color="#fcfcfc" id="n9">
+          <geometry y="80" x="150" height="20" width="20"/>
+          <label size="12" y="100" x="150" customSize="0" height="22" width="39">exists</label>
         </node>
-        <edge target="n4" type="input" id="e0" source="n5">
-          <point x="-340" y="270"/>
-          <point x="-340" y="180"/>
-          <point x="-50" y="180"/>
+        <edge source="n5" type="input" target="n4" id="e0">
+          <point y="270" x="-340"/>
+          <point y="180" x="-340"/>
+          <point y="180" x="-50"/>
         </edge>
-        <edge target="n4" type="input" id="e1" source="n6">
-          <point x="-550" y="270"/>
-          <point x="-550" y="180"/>
-          <point x="-50" y="180"/>
+        <edge source="n6" type="input" target="n4" id="e1">
+          <point y="270" x="-550"/>
+          <point y="180" x="-550"/>
+          <point y="180" x="-50"/>
         </edge>
-        <edge target="n12" type="inclusion" id="e10" source="n15">
-          <point x="460" y="320"/>
-          <point x="460" y="420"/>
+        <edge source="n15" type="inclusion" target="n12" id="e10">
+          <point y="340" x="460"/>
+          <point y="430" x="460"/>
         </edge>
-        <edge target="n16" type="inclusion" id="e11" source="n7">
-          <point x="500" y="80"/>
-          <point x="500" y="-100"/>
+        <edge source="n7" type="inclusion" target="n16" id="e11">
+          <point y="80" x="500"/>
+          <point y="-100" x="500"/>
         </edge>
-        <edge target="n22" type="input" id="e12" source="n18">
-          <point x="-250" y="80"/>
-          <point x="-350" y="80"/>
+        <edge source="n18" type="input" target="n22" id="e12">
+          <point y="80" x="-250"/>
+          <point y="80" x="-350"/>
         </edge>
-        <edge target="n21" type="input" id="e13" source="n18">
-          <point x="-250" y="80"/>
-          <point x="-150" y="80"/>
+        <edge source="n18" type="input" target="n21" id="e13">
+          <point y="80" x="-250"/>
+          <point y="80" x="-150"/>
         </edge>
-        <edge target="n2" type="inclusion" id="e15" source="n21">
-          <point x="-150" y="80"/>
-          <point x="-10" y="80"/>
+        <edge source="n21" type="inclusion" target="n2" id="e15">
+          <point y="80" x="-150"/>
+          <point y="80" x="-10"/>
         </edge>
-        <edge target="n23" type="inclusion" id="e16" source="n17">
-          <point x="-670" y="80"/>
-          <point x="-670" y="-80"/>
+        <edge source="n17" type="inclusion" target="n23" id="e16">
+          <point y="80" x="-670"/>
+          <point y="-80" x="-670"/>
         </edge>
-        <edge target="n2" type="inclusion" id="e2" source="n4">
-          <point x="-50" y="180"/>
-          <point x="-50" y="104"/>
+        <edge source="n4" type="inclusion" target="n2" id="e2">
+          <point y="180" x="-50"/>
+          <point y="104" x="-50"/>
         </edge>
-        <edge target="n40" type="input" id="e28" source="n35">
-          <point x="620" y="260"/>
-          <point x="620" y="170"/>
+        <edge source="n35" type="input" target="n40" id="e28">
+          <point y="270" x="660"/>
+          <point y="180" x="660"/>
         </edge>
-        <edge target="n41" type="input" id="e29" source="n35">
-          <point x="620" y="260"/>
-          <point x="620" y="320"/>
+        <edge source="n35" type="input" target="n41" id="e29">
+          <point y="270" x="660"/>
+          <point y="340" x="660"/>
         </edge>
-        <edge target="n9" type="input" id="e3" source="n8">
-          <point x="250" y="80"/>
-          <point x="150" y="80"/>
+        <edge source="n8" type="input" target="n9" id="e3">
+          <point y="80" x="250"/>
+          <point y="80" x="150"/>
         </edge>
-        <edge target="n7" type="inclusion" id="e30" source="n40">
-          <point x="620" y="170"/>
-          <point x="530" y="170"/>
-          <point x="530" y="104"/>
+        <edge source="n40" type="inclusion" target="n7" id="e30">
+          <point y="180" x="660"/>
+          <point y="180" x="530"/>
+          <point y="104" x="530"/>
         </edge>
-        <edge target="n34" type="inclusion" id="e31" source="n41">
-          <point x="620" y="320"/>
-          <point x="620" y="420"/>
+        <edge source="n41" type="inclusion" target="n34" id="e31">
+          <point y="340" x="660"/>
+          <point y="430" x="660"/>
         </edge>
-        <edge target="n42" type="input" id="e32" source="n37">
-          <point x="790" y="260"/>
-          <point x="790" y="180"/>
+        <edge source="n37" type="input" target="n42" id="e32">
+          <point y="270" x="870"/>
+          <point y="180" x="870"/>
         </edge>
-        <edge target="n43" type="input" id="e33" source="n37">
-          <point x="790" y="260"/>
-          <point x="790" y="330"/>
+        <edge source="n37" type="input" target="n43" id="e33">
+          <point y="270" x="870"/>
+          <point y="340" x="870"/>
         </edge>
-        <edge target="n7" type="inclusion" id="e34" source="n42">
-          <point x="790" y="180"/>
-          <point x="790" y="100"/>
-          <point x="554" y="98"/>
+        <edge source="n42" type="inclusion" target="n7" id="e34">
+          <point y="180" x="870"/>
+          <point y="100" x="870"/>
+          <point y="98" x="554"/>
         </edge>
-        <edge target="n36" type="inclusion" id="e35" source="n43">
-          <point x="790" y="330"/>
-          <point x="790" y="420"/>
+        <edge source="n43" type="inclusion" target="n36" id="e35">
+          <point y="340" x="870"/>
+          <point y="430" x="870"/>
         </edge>
-        <edge target="n44" type="input" id="e36" source="n39">
-          <point x="960" y="260"/>
-          <point x="960" y="180"/>
+        <edge source="n39" type="input" target="n44" id="e36">
+          <point y="270" x="1050"/>
+          <point y="180" x="1050"/>
         </edge>
-        <edge target="n45" type="input" id="e37" source="n39">
-          <point x="960" y="260"/>
-          <point x="960" y="330"/>
+        <edge source="n39" type="input" target="n45" id="e37">
+          <point y="270" x="1050"/>
+          <point y="340" x="1050"/>
         </edge>
-        <edge target="n38" type="inclusion" id="e38" source="n45">
-          <point x="960" y="330"/>
-          <point x="960" y="420"/>
+        <edge source="n45" type="inclusion" target="n38" id="e38">
+          <point y="340" x="1050"/>
+          <point y="430" x="1050"/>
         </edge>
-        <edge target="n7" type="inclusion" id="e39" source="n44">
-          <point x="960" y="180"/>
-          <point x="960" y="80"/>
-          <point x="554" y="80"/>
+        <edge source="n44" type="inclusion" target="n7" id="e39">
+          <point y="180" x="1050"/>
+          <point y="80" x="1050"/>
+          <point y="80" x="554"/>
         </edge>
-        <edge target="n10" type="input" id="e4" source="n8">
-          <point x="250" y="80"/>
-          <point x="350" y="80"/>
+        <edge source="n8" type="input" target="n10" id="e4">
+          <point y="80" x="250"/>
+          <point y="80" x="350"/>
         </edge>
-        <edge target="n47" type="input" id="e40" source="n46">
-          <point x="200" y="440"/>
-          <point x="120" y="440"/>
+        <edge source="n46" type="input" target="n47" id="e40">
+          <point y="440" x="230"/>
+          <point y="440" x="120"/>
         </edge>
-        <edge target="n48" type="inclusion" id="e42" source="n22">
-          <point x="-350" y="80"/>
-          <point x="-480" y="80"/>
+        <edge source="n22" type="inclusion" target="n48" id="e42">
+          <point y="80" x="-350"/>
+          <point y="80" x="-480"/>
         </edge>
-        <edge target="n17" type="inclusion" id="e43" source="n48">
-          <point x="-480" y="80"/>
-          <point x="-670" y="80"/>
+        <edge source="n48" type="inclusion" target="n17" id="e43">
+          <point y="80" x="-480"/>
+          <point y="80" x="-670"/>
         </edge>
-        <edge target="n49" type="inclusion" id="e44" source="n2">
-          <point x="-10" y="80"/>
-          <point x="-10" y="-220"/>
+        <edge source="n2" type="inclusion" target="n49" id="e44">
+          <point y="80" x="-10"/>
+          <point y="-220" x="-10"/>
         </edge>
-        <edge target="n52" type="input" id="e45" source="n51">
-          <point x="150" y="-100"/>
-          <point x="150" y="10"/>
+        <edge source="n51" type="input" target="n52" id="e45">
+          <point y="-100" x="150"/>
+          <point y="10" x="150"/>
         </edge>
-        <edge target="n52" type="inclusion" id="e46" source="n2">
-          <point x="30" y="55"/>
-          <point x="30" y="10"/>
-          <point x="150" y="10"/>
+        <edge source="n2" type="inclusion" target="n52" id="e46">
+          <point y="55" x="30"/>
+          <point y="10" x="30"/>
+          <point y="10" x="150"/>
         </edge>
-        <edge target="n56" type="input" id="e47" source="n55">
-          <point x="1120" y="260"/>
-          <point x="1120" y="180"/>
+        <edge source="n55" type="input" target="n56" id="e47">
+          <point y="270" x="1250"/>
+          <point y="170" x="1250"/>
         </edge>
-        <edge target="n57" type="input" id="e48" source="n55">
-          <point x="1120" y="260"/>
-          <point x="1120" y="330"/>
+        <edge source="n55" type="input" target="n57" id="e48">
+          <point y="270" x="1250"/>
+          <point y="340" x="1250"/>
         </edge>
-        <edge target="n7" type="inclusion" id="e49" source="n56">
-          <point x="1120" y="180"/>
-          <point x="1120" y="60"/>
-          <point x="554" y="60"/>
+        <edge source="n56" type="inclusion" target="n7" id="e49">
+          <point y="170" x="1250"/>
+          <point y="60" x="1250"/>
+          <point y="60" x="554"/>
         </edge>
-        <edge target="n2" type="inclusion" id="e5" source="n9">
-          <point x="150" y="80"/>
-          <point x="-10" y="80"/>
+        <edge source="n9" type="inclusion" target="n2" id="e5">
+          <point y="80" x="150"/>
+          <point y="80" x="-10"/>
         </edge>
-        <edge target="n54" type="inclusion" id="e50" source="n57">
-          <point x="1120" y="330"/>
-          <point x="1120" y="420"/>
+        <edge source="n57" type="inclusion" target="n54" id="e50">
+          <point y="340" x="1250"/>
+          <point y="430" x="1250"/>
         </edge>
-        <edge target="n60" type="input" id="e51" source="n59">
-          <point x="0" y="260"/>
-          <point x="0" y="180"/>
+        <edge source="n59" type="input" target="n60" id="e51">
+          <point y="260" x="0"/>
+          <point y="180" x="0"/>
         </edge>
-        <edge target="n61" type="input" id="e52" source="n59">
-          <point x="0" y="260"/>
-          <point x="0" y="340"/>
+        <edge source="n59" type="input" target="n61" id="e52">
+          <point y="260" x="0"/>
+          <point y="340" x="0"/>
         </edge>
-        <edge target="n2" type="inclusion" id="e53" source="n60">
-          <point x="0" y="180"/>
-          <point x="0" y="104"/>
+        <edge source="n60" type="inclusion" target="n2" id="e53">
+          <point y="180" x="0"/>
+          <point y="104" x="0"/>
         </edge>
-        <edge target="n58" type="inclusion" id="e54" source="n61">
-          <point x="0" y="340"/>
-          <point x="0" y="460"/>
+        <edge source="n61" type="inclusion" target="n58" id="e54">
+          <point y="340" x="0"/>
+          <point y="460" x="0"/>
         </edge>
-        <edge target="n58" type="inclusion" id="e55" source="n47">
-          <point x="120" y="440"/>
-          <point x="54" y="440"/>
+        <edge source="n47" type="inclusion" target="n58" id="e55">
+          <point y="440" x="120"/>
+          <point y="440" x="54"/>
         </edge>
-        <edge target="n64" type="input" id="e56" source="n63">
-          <point x="0" y="610"/>
-          <point x="0" y="540"/>
+        <edge source="n63" type="input" target="n64" id="e56">
+          <point y="610" x="0"/>
+          <point y="540" x="0"/>
         </edge>
-        <edge target="n65" type="input" id="e57" source="n63">
-          <point x="0" y="610"/>
-          <point x="0" y="680"/>
+        <edge source="n63" type="input" target="n65" id="e57">
+          <point y="610" x="0"/>
+          <point y="680" x="0"/>
         </edge>
-        <edge target="n62" type="inclusion" id="e59" source="n65">
-          <point x="0" y="680"/>
-          <point x="0" y="760"/>
+        <edge source="n65" type="inclusion" target="n62" id="e59">
+          <point y="680" x="0"/>
+          <point y="760" x="0"/>
         </edge>
-        <edge target="n7" type="equivalence" id="e6" source="n10">
-          <point x="350" y="80"/>
-          <point x="500" y="80"/>
+        <edge source="n10" type="equivalence" target="n7" id="e6">
+          <point y="80" x="350"/>
+          <point y="80" x="500"/>
         </edge>
-        <edge target="n64" type="equivalence" id="e60" source="n58">
-          <point x="0" y="460"/>
-          <point x="0" y="540"/>
+        <edge source="n58" type="equivalence" target="n64" id="e60">
+          <point y="460" x="0"/>
+          <point y="540" x="0"/>
         </edge>
-        <edge target="n67" type="input" id="e61" source="n66">
-          <point x="200" y="480"/>
-          <point x="120" y="480"/>
+        <edge source="n66" type="input" target="n67" id="e61">
+          <point y="480" x="230"/>
+          <point y="480" x="120"/>
         </edge>
-        <edge target="n58" type="inclusion" id="e62" source="n67">
-          <point x="120" y="480"/>
-          <point x="54" y="480"/>
+        <edge source="n67" type="inclusion" target="n58" id="e62">
+          <point y="480" x="120"/>
+          <point y="480" x="54"/>
         </edge>
-        <edge target="n70" type="input" id="e63" source="n69">
-          <point x="-170" y="610"/>
-          <point x="-170" y="540"/>
+        <edge source="n69" type="input" target="n70" id="e63">
+          <point y="610" x="-170"/>
+          <point y="540" x="-170"/>
         </edge>
-        <edge target="n71" type="input" id="e64" source="n69">
-          <point x="-170" y="610"/>
-          <point x="-170" y="680"/>
+        <edge source="n69" type="input" target="n71" id="e64">
+          <point y="610" x="-170"/>
+          <point y="680" x="-170"/>
         </edge>
-        <edge target="n58" type="equivalence" id="e66" source="n70">
-          <point x="-170" y="540"/>
-          <point x="-170" y="460"/>
-          <point x="0" y="460"/>
+        <edge source="n70" type="equivalence" target="n58" id="e66">
+          <point y="540" x="-170"/>
+          <point y="460" x="-170"/>
+          <point y="460" x="0"/>
         </edge>
-        <edge target="n68" type="inclusion" id="e67" source="n71">
-          <point x="-170" y="680"/>
-          <point x="-170" y="760"/>
+        <edge source="n71" type="inclusion" target="n68" id="e67">
+          <point y="680" x="-170"/>
+          <point y="760" x="-170"/>
         </edge>
-        <edge target="n14" type="input" id="e7" source="n13">
-          <point x="460" y="250"/>
-          <point x="460" y="170"/>
+        <edge source="n13" type="input" target="n14" id="e7">
+          <point y="270" x="460"/>
+          <point y="180" x="460"/>
         </edge>
-        <edge target="n15" type="input" id="e8" source="n13">
-          <point x="460" y="250"/>
-          <point x="460" y="320"/>
+        <edge source="n13" type="input" target="n15" id="e8">
+          <point y="270" x="460"/>
+          <point y="340" x="460"/>
         </edge>
-        <edge target="n7" type="inclusion" id="e9" source="n14">
-          <point x="460" y="170"/>
-          <point x="460" y="104"/>
+        <edge source="n14" type="inclusion" target="n7" id="e9">
+          <point y="180" x="460"/>
+          <point y="104" x="460"/>
         </edge>
       </diagram>
-      <diagram height="5000" name="tipizzazione data property" width="5000">
-        <node type="attribute" id="n0" color="#fcfcfc">
-          <geometry x="160" y="20" height="20" width="20"/>
+      <diagram name="tipizzazione data property" width="5000" height="5000">
+        <node type="attribute" color="#fcfcfc" id="n0">
+          <geometry y="20" x="160" height="20" width="20"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/codiceSchedaCatalogazione</iri>
-          <label x="160" y="-2" height="23" customSize="0" size="12" width="162"/>
+          <label size="12" y="-2" x="160" customSize="0" height="22" width="239"/>
         </node>
-        <node type="range-restriction" id="n1" color="#000000">
-          <geometry x="30" y="20" height="20" width="20"/>
-          <label x="30" y="-2" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n1">
+          <geometry y="20" x="30" height="20" width="20"/>
+          <label size="12" y="-2" x="30" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="value-domain" id="n2" color="#fcfcfc">
-          <geometry x="-110" y="20" height="40" width="90"/>
+        <node type="value-domain" color="#fcfcfc" id="n2">
+          <geometry y="20" x="-110" height="40" width="90"/>
           <iri>http://www.w3.org/2001/XMLSchema#string</iri>
-          <label x="-110" y="20" height="23" customSize="0" size="12" width="90"/>
+          <label size="12" y="20" x="-110" customSize="0" height="22" width="90"/>
         </node>
-        <node type="attribute" id="n3" color="#fcfcfc">
-          <geometry x="160" y="120" height="20" width="20"/>
+        <node type="attribute" color="#fcfcfc" id="n3">
+          <geometry y="120" x="160" height="20" width="20"/>
           <iri>https://w3id.org/italia/real-estate/onto/StateProperty/avvisoSchedaProvvisoria</iri>
-          <label x="180" y="100" height="23" customSize="0" size="12" width="145"/>
+          <label size="12" y="100" x="180" customSize="0" height="22" width="221"/>
         </node>
-        <node type="range-restriction" id="n4" color="#000000">
-          <geometry x="30" y="120" height="20" width="20"/>
-          <label x="30" y="98" height="23" customSize="0" size="12" width="39">exists</label>
+        <node type="range-restriction" color="#000000" id="n4">
+          <geometry y="120" x="30" height="20" width="20"/>
+          <label size="12" y="98" x="30" customSize="0" height="22" width="39">exists</label>
         </node>
-        <node type="value-domain" id="n5" color="#fcfcfc">
-          <geometry x="-110" y="120" height="40" width="90"/>
+        <node type="value-domain" color="#fcfcfc" id="n5">
+          <geometry y="120" x="-110" height="40" width="90"/>
           <iri>http://www.w3.org/2001/XMLSchema#boolean</iri>
-          <label x="-110" y="120" height="23" customSize="0" size="12" width="90"/>
+          <label size="12" y="120" x="-110" customSize="0" height="22" width="90"/>
         </node>
-        <edge target="n1" type="input" id="e0" source="n0">
-          <point x="160" y="20"/>
-          <point x="30" y="20"/>
+        <edge source="n0" type="input" target="n1" id="e0">
+          <point y="20" x="160"/>
+          <point y="20" x="30"/>
         </edge>
-        <edge target="n2" type="inclusion" id="e1" source="n1">
-          <point x="30" y="20"/>
-          <point x="-110" y="20"/>
+        <edge source="n1" type="inclusion" target="n2" id="e1">
+          <point y="20" x="30"/>
+          <point y="20" x="-110"/>
         </edge>
-        <edge target="n4" type="input" id="e2" source="n3">
-          <point x="160" y="120"/>
-          <point x="30" y="120"/>
+        <edge source="n3" type="input" target="n4" id="e2">
+          <point y="120" x="160"/>
+          <point y="120" x="30"/>
         </edge>
-        <edge target="n5" type="inclusion" id="e3" source="n4">
-          <point x="30" y="120"/>
-          <point x="-110" y="120"/>
+        <edge source="n4" type="inclusion" target="n5" id="e3">
+          <point y="120" x="30"/>
+          <point y="120" x="-110"/>
         </edge>
       </diagram>
     </diagrams>

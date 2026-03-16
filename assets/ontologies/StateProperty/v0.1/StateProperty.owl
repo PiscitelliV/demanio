@@ -1,342 +1,1352 @@
-Prefix: CLV: <https://w3id.org/italia/onto/CLV/>
-Prefix: COV: <https://w3id.org/italia/onto/COV/>
-Prefix: CPV: <https://w3id.org/italia/onto/CPV/>
-Prefix: L0: <https://w3id.org/italia/onto/l0/>
-Prefix: RO: <https://w3id.org/italia/onto/RO/>
-Prefix: StateProperty: <https://w3id.org/italia/real-estate/onto/StateProperty/>
-Prefix: TI: <https://w3id.org/italia/onto/TI/>
-Prefix: ateco-2007: <https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/ateco-2007/>
-Prefix: countries: <http://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/>
-Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
-Prefix: smapit: <https://w3id.org/italia/onto/SM/>
-Prefix: xml: <http://www.w3.org/XML/1998/namespace>
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: : <https://w3id.org/italia/real-estate/onto/StateProperty/>
-
-
-
-Ontology: <https://w3id.org/italia/real-estate/onto/StateProperty/>
-<urn:absolute:0.1>
-
-AnnotationProperty: rdfs:label
-
-
-Datatype: rdf:PlainLiteral
-
-
-Datatype: xsd:boolean
-
-
-Datatype: xsd:string
-
-
-ObjectProperty: CLV:hasSpatialCoverage
-
-
-ObjectProperty: StateProperty:haCategoriaBeneDelloStato
-
-    Annotations:
-        rdfs:label "ha categoria bene dello Stato"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:SchedaDiCatalogazione
-
-    Range:
-        StateProperty:CategoriaBeneDelloStato
-
-
-ObjectProperty: StateProperty:haCategoriaPatrimoniale
-
-    Annotations:
-        rdfs:label "ha categoria patrimoniale"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:StatoDelBeneImmobileDelloStato
-
-    Range:
-        StateProperty:TipoCategoriaPatrimonialeImmobile
-
-
-ObjectProperty: StateProperty:haCodiceSEC
-
-    Annotations:
-        rdfs:label "ha codice SEC"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:BeneImmobileDelloStato
-
-    Range:
-        StateProperty:CodiceMEFRaccordoSECImmobile
-
-
-ObjectProperty: StateProperty:haDestinazioneDiUso
-
-    Annotations:
-        rdfs:label "ha destinazione di uso"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:StatoDelBeneImmobileDelloStato
-
-    Range:
-        StateProperty:TipoDestinazioneDiUsoImmobile
-
-
-ObjectProperty: StateProperty:haSchedaDiCatalogazione
-
-    Annotations:
-        rdfs:label "ha scheda di catalogazione"@it
-
-    Domain:
-        StateProperty:BeneImmobileDelloStato
-
-    Range:
-        StateProperty:SchedaDiCatalogazione
-
-
-ObjectProperty: StateProperty:haStatoDelBeneImmobileDelloStato
-
-    Annotations:
-        rdfs:label "ha stato del bene immobile dello Stato"@it
-
-    Characteristics:
-        InverseFunctional
-
-    Domain:
-        StateProperty:BeneImmobileDelloStato
-
-    Range:
-        StateProperty:StatoDelBeneImmobileDelloStato
-
-
-ObjectProperty: StateProperty:haStatoDiAgibilità
-
-    Annotations:
-        rdfs:label "ha stato di agibilità"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:StatoDelBeneImmobileDelloStato
-
-    Range:
-        StateProperty:TipoStatoDiAgibilitaImmobile
-
-
-ObjectProperty: StateProperty:haStatoDiOccupazione
-
-    Annotations:
-        rdfs:label "ha stato di occupazione"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:StatoDelBeneImmobileDelloStato
-
-    Range:
-        StateProperty:TipoStatoDiOccupazioneImmobile
-
-
-ObjectProperty: StateProperty:haTipoDiAccesso
-
-    Annotations:
-        rdfs:label "ha tipo di accesso"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:StatoDelBeneImmobileDelloStato
-
-    Range:
-        StateProperty:TipoDiAccessoImmobile
-
-
-ObjectProperty: StateProperty:riferisceProvincia
-
-    Annotations:
-        rdfs:label "riferisce provincia"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:SchedaDiCatalogazione
-
-    Range:
-        CLV:Province
-
-
-DataProperty: StateProperty:avvisoSchedaProvvisoria
-
-    Annotations:
-        rdfs:label "avviso scheda provvisoria"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:SchedaDiCatalogazione
-
-    Range:
-        xsd:boolean
-
-
-DataProperty: StateProperty:codiceSchedaCatalogazione
-
-    Annotations:
-        rdfs:label "codice scheda catalogazione"@it
-
-    Characteristics:
-        Functional
-
-    Domain:
-        StateProperty:SchedaDiCatalogazione
-
-    Range:
-        xsd:string
-
-
-Class: CLV:Identifier
-
-
-Class: CLV:Province
-
-
-Class: StateProperty:Area
-
-    Annotations:
-        rdfs:label "Area"@it
-
-    DisjointWith:
-        StateProperty:Fabbricato
-
-
-Class: StateProperty:BeneImmobileDelloStato
-
-    Annotations:
-        rdfs:label "Bene immobile dello Stato"@it
-
-    SubClassOf:
-        StateProperty:Cespite,
-        CLV:hasSpatialCoverage some owl:Thing
-
-
-Class: StateProperty:CategoriaBeneDelloStato
-
-    Annotations:
-        rdfs:label "Categoria bene dello Stato"@it
-
-
-Class: StateProperty:Cespite
-
-    Annotations:
-        rdfs:label "Cespite"@it
-
-
-Class: StateProperty:CodiceMEFRaccordoSEC
-
-    Annotations:
-        rdfs:label "Codice MEF raccordo SEC"@it
-
-    SubClassOf:
-        CLV:Identifier
-
-
-Class: StateProperty:CodiceMEFRaccordoSECImmobile
-
-    Annotations:
-        rdfs:label "Codice MEF raccordo SEC bene immobile"@it
-
-    SubClassOf:
-        StateProperty:CodiceMEFRaccordoSEC
-
-
-Class: StateProperty:Fabbricato
-
-    Annotations:
-        rdfs:label "Fabbricato"@it
-
-    DisjointWith:
-        StateProperty:Area
-
-
-Class: StateProperty:SchedaDiCatalogazione
-
-    Annotations:
-        rdfs:label "Scheda di catalogazione"@it
-
-    EquivalentTo:
-        StateProperty:haCategoriaBeneDelloStato some owl:Thing,
-        StateProperty:riferisceProvincia some owl:Thing
-
-
-Class: StateProperty:StatoDelBeneImmobileDelloStato
-
-    Annotations:
-        rdfs:label "Stato del Bene immobile dello Stato"@it
-
-    EquivalentTo:
-         inverse (StateProperty:haStatoDelBeneImmobileDelloStato) some owl:Thing
-
-    SubClassOf:
-        TI:TimeIndexedEvent
-
-
-Class: StateProperty:TipoCategoriaPatrimonialeImmobile
-
-    Annotations:
-        rdfs:label "Tipo categoria patrimoniale immobile"@it
-
-
-Class: StateProperty:TipoDestinazioneDiUsoImmobile
-
-    Annotations:
-        rdfs:label "Tipo destinazione di uso immobile"@it
-
-
-Class: StateProperty:TipoDiAccessoImmobile
-
-    Annotations:
-        rdfs:label "Tipo di accesso immobile"@it
-
-
-Class: StateProperty:TipoStatoDiAgibilitaImmobile
-
-    Annotations:
-        rdfs:label "Tipo stato di agibilità immobile"@it
-
-
-Class: StateProperty:TipoStatoDiOccupazioneImmobile
-
-    Annotations:
-        rdfs:label "Tipo stato di occupazione immobile"@it
-
-
-Class: TI:TimeIndexedEvent
-
-
-Class: owl:Thing
-
-
-Class: StateProperty:Area or StateProperty:Fabbricato
-
-    SubClassOf:
-        StateProperty:BeneImmobileDelloStato
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/italia/real-estate/onto/StateProperty"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/italia/real-estate/onto/StateProperty"
+     versionIRI="urn:absolute:0.1">
+    <Prefix name="TI" IRI="https://w3id.org/italia/onto/TI/"/>
+    <Prefix name="l0" IRI="https://w3id.org/italia/onto/l0/"/>
+    <Prefix name="CLV" IRI="https://w3id.org/italia/onto/CLV/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vcard" IRI="http://www.w3.org/2006/vcard/ns#"/>
+    <Prefix name="admsapit" IRI="https://w3id.org/italia/onto/ADMS/"/>
+    <Prefix name="dcatapit" IRI="http://dati.gov.it/onto/dcatapit#"/>
+    <Prefix name="StateProperty" IRI="https://w3id.org/italia/real-estate/onto/StateProperty/"/>
+    <Import>https://w3id.org/italia/onto/l0</Import>
+    <Import>https://w3id.org/italia/onto/CLV/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:accrualPeriodicity"/>
+        <IRI>http://publications.europa.eu/resource/authority/frequency/IRREG</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:conformsTo"/>
+        <IRI>https://w3id.org/italia/data/standard/SKOS</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/italia/data/public-organization/ISTAT</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+        <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="it">La risorsa modella il dominio dei beni immobili dello stato gestiti dall’Agenzia del Demanio, definendone le caratteristiche fisiche, le categorie patrimoniali e le specifiche destinazioni d&apos;uso. L&apos;ontologia permette di rappresentare i dati amministrativi e tecnici necessari alla gestione e al monitoraggio del patrimonio immobiliare dello Stato, facilitando l&apos;interoperabilità tra i sistemi informativi dell&apos;Agenzia del Demanio e delle altre pubbliche amministrazioni.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <Literal xml:lang="en">The resource models the domain of state-owned real estate assets managed by the Italian State Property Agency, defining their physical characteristics, property categories, and specific uses. The ontology enables the representation of the administrative and technical data required for the management and monitoring of the State’s real estate assets, facilitating interoperability between the information systems of the State Property Agency and those of other public administrations.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:identifier"/>
+        <Literal>https://w3id.org/italia/real-estate/onto/StateProperty</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2026-03-16</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+        <IRI>http://publications.europa.eu/resource/authority/language/ITA</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2026-03-16</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:publisher"/>
+        <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:rightsHolder"/>
+        <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:subject"/>
+        <IRI>http://publications.europa.eu/resource/authority/data-theme/ECON</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:temporal"/>
+        <Literal>Dal 2026</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="it">Ontologia dei beni immobili dello Stato</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <Literal xml:lang="en">State-Owned Real Estate Assets Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Conceptual model for the representation of data related to state-owned real estate assets managed by the Italian State Property Agency, including aspects of cataloguing and usability certification.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="it">Modello concettuale per la rappresentazione dei dati relativi ai beni immobili dello Stato gestiti dall’Agenzia del Demanio, inclusi gli aspetti di catalogazione e agibilità.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI></IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="it">Ontologia dei beni immobili dello Stato</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">State-Owned Real Estate Assets Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="it">Version 1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">Versione 1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:contactPoint"/>
+        <IRI>https://w3id.org/italia/data/contact-point/ISTAT-NDC</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="en">Asset management</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="it">Beni pubblici dello Stato</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="it">Demanio</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="it">Gestione patrimoniale</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="it">Patrimonio immobiliare dello Stato</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="en">Real estate</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="en">State property</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+        <Literal xml:lang="en">State public assets</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcat:theme"/>
+        <IRI>http://publications.europa.eu/resource/authority/data-theme/ECON</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+        <IRI>/1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:acronym"/>
+        <Literal>BIS</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasContributor"/>
+        <IRI>https://w3id.org/italia/data/organization/public-organization/td</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasKeyClass"/>
+        <IRI>/BeneImmobileDelloStato</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasOntologyLanguage"/>
+        <AbbreviatedIRI>admsapit:OWL</AbbreviatedIRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasSemanticAssetDistribution"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasSemanticAssetDistribution"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasSemanticAssetDistribution"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasTask"/>
+        <AbbreviatedIRI>admsapit:AnnotationTask</AbbreviatedIRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasTask"/>
+        <AbbreviatedIRI>admsapit:QueryFormulationTask</AbbreviatedIRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasTask"/>
+        <AbbreviatedIRI>admsapit:SearchTask</AbbreviatedIRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:officialURI"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/real-estate/onto/StateProperty</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:prefix"/>
+        <Literal>StateProperty</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:semanticAssetInUse"/>
+        <IRI>https://w3id.org/italia/data/project/CLV</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:status"/>
+        <Literal>catalogued</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:status"/>
+        <Literal>published</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="admsapit:target"/>
+        <Literal>Pubbliche Amministrazioni</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="CLV:Identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="CLV:Province"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="TI:TimeIndexedEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/BeneImmobileDelloStato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CategoriaBeneImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Cespite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CodiceMEFRaccordoSEC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CodiceMEFRaccordoSECBeneImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Fabbricato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/StatoBeneImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Terreno"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TipoAccessoImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TipoCategoriaPatrimonialeImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TipoDestinazioneUsoImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TipoStatoAgibilitàImmobile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/TipoStatoOccupazioneImmobile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="CLV:hasSpatialCoverage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haCategoriaBene"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haCategoriaPatrimoniale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haCodiceSEC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haDestinazioneUso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haSchedaCatalogazione"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haStatoAgibilità"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haStatoDelBeneImmobile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haStatoOccupazione"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/haTipoAccesso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/riferisceProvincia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/avvisoSchedaProvvisoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/codiceSchedaCatalogazione"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/distribution/StateProperty-JSON-LD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/distribution/StateProperty-RDF-XML"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/project/CLV"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:Standard"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:accrualPeriodicity"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="admsapit:SemanticAsset"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasKeyClass"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="l0:name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:temporal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcat:contactPoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/contact-point/ISTAT-NDC"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/standard/SKOS"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:prefix"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dcatapit:Standard"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vcard:hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/public-organization/agd"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasOntologyLanguage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:target"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:rightsHolder"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:acronym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:format"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dcatapit:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dcatapit:Agent"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcat:accessURL"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasTask"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:officialURI"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="vcard:Organization"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcat:theme"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcat:keyword"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:semanticAssetInUse"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="admsapit:SemanticAssetDistribution"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="vcard:Kind"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasContributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:conformsTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/italia/data/public-organization/ISTAT"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="admsapit:hasSemanticAssetDistribution"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vcard:fn"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/haCategoriaBene"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/riferisceProvincia"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/StatoBeneImmobile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="/haStatoDelBeneImmobile"/>
+            </ObjectInverseOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="/BeneImmobileDelloStato"/>
+        <Class IRI="/Cespite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/BeneImmobileDelloStato"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="CLV:hasSpatialCoverage"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CodiceMEFRaccordoSEC"/>
+        <Class abbreviatedIRI="CLV:Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CodiceMEFRaccordoSECBeneImmobile"/>
+        <Class IRI="/CodiceMEFRaccordoSEC"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/StatoBeneImmobile"/>
+        <Class abbreviatedIRI="TI:TimeIndexedEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectUnionOf>
+            <Class IRI="/Fabbricato"/>
+            <Class IRI="/Terreno"/>
+        </ObjectUnionOf>
+        <Class IRI="/BeneImmobileDelloStato"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Fabbricato"/>
+        <Class IRI="/Terreno"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dcatapit:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/contact-point/ISTAT-NDC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vcard:Kind"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/contact-point/ISTAT-NDC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vcard:Organization"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/contact-point/ISTAT-NDC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="admsapit:SemanticAssetDistribution"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/distribution/StateProperty-JSON-LD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="admsapit:SemanticAssetDistribution"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="admsapit:SemanticAssetDistribution"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/distribution/StateProperty-RDF-XML"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="admsapit:SemanticAsset"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/project/CLV"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dcatapit:Agent"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/public-organization/ISTAT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Agent"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/public-organization/ISTAT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dcatapit:Agent"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/public-organization/agd"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Agent"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/public-organization/agd"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dcatapit:Standard"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/standard/SKOS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dct:Standard"/>
+        <NamedIndividual IRI="https://w3id.org/italia/data/standard/SKOS"/>
+    </ClassAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haCategoriaBene"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haCategoriaPatrimoniale"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haCodiceSEC"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haDestinazioneUso"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haStatoAgibilità"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haStatoOccupazione"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/haTipoAccesso"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/riferisceProvincia"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="/haStatoDelBeneImmobile"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haCategoriaBene"/>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haCategoriaPatrimoniale"/>
+        <Class IRI="/StatoBeneImmobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haCodiceSEC"/>
+        <Class IRI="/BeneImmobileDelloStato"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haDestinazioneUso"/>
+        <Class IRI="/StatoBeneImmobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haSchedaCatalogazione"/>
+        <Class IRI="/BeneImmobileDelloStato"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haStatoAgibilità"/>
+        <Class IRI="/StatoBeneImmobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haStatoDelBeneImmobile"/>
+        <Class IRI="/BeneImmobileDelloStato"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haStatoOccupazione"/>
+        <Class IRI="/StatoBeneImmobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/haTipoAccesso"/>
+        <Class IRI="/StatoBeneImmobile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/riferisceProvincia"/>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haCategoriaBene"/>
+        <Class IRI="/CategoriaBeneImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haCategoriaPatrimoniale"/>
+        <Class IRI="/TipoCategoriaPatrimonialeImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haCodiceSEC"/>
+        <Class IRI="/CodiceMEFRaccordoSECBeneImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haDestinazioneUso"/>
+        <Class IRI="/TipoDestinazioneUsoImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haSchedaCatalogazione"/>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haStatoAgibilità"/>
+        <Class IRI="/TipoStatoAgibilitàImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haStatoDelBeneImmobile"/>
+        <Class IRI="/StatoBeneImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haStatoOccupazione"/>
+        <Class IRI="/TipoStatoOccupazioneImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/haTipoAccesso"/>
+        <Class IRI="/TipoAccessoImmobile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/riferisceProvincia"/>
+        <Class abbreviatedIRI="CLV:Province"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/avvisoSchedaProvvisoria"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="/codiceSchedaCatalogazione"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="/avvisoSchedaProvvisoria"/>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/codiceSchedaCatalogazione"/>
+        <Class IRI="/SchedaCatalogazioneBene"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/avvisoSchedaProvvisoria"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/codiceSchedaCatalogazione"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vcard:fn"/>
+        <IRI>https://w3id.org/italia/data/contact-point/ISTAT-NDC</IRI>
+        <Literal>Segreteria Tecnica Istat - Progetto PNRR National Data Catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vcard:hasEmail"/>
+        <IRI>https://w3id.org/italia/data/contact-point/ISTAT-NDC</IRI>
+        <IRI>mailto:ndc-segr-tec@istat.it</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <Literal xml:lang="it">Questa è la distribuzione JSON-LD dell&apos;ontologia dei beni immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <Literal xml:lang="en">This is the distribution in JSON-LD of State-Owned Real Estate Assets Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:format"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <IRI>http://publications.europa.eu/resource/authority/file-type/JSON_LD</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <IRI>https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <Literal xml:lang="it">Distribuzione JSON-LD dell&apos;ontologia dei beni immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <Literal xml:lang="en">JSON-LD distribution of State-Owned Real Estate Assets Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dcat:accessURL"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
+        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.jsonld</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <Literal xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia dei beni immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <Literal xml:lang="en">This is the distribution in RDF/turtle of State-Owned Real Estate Assets Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:format"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <IRI>http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <IRI>https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <Literal xml:lang="it">Distribuzione RDF/Turtle dell&apos;ontologia dei beni immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <Literal xml:lang="en">RDF/Turtle distribution of State-Owned Real Estate Assets Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dcat:accessURL"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
+        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.ttl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <Literal xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia dei beni immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <Literal xml:lang="en">This is the distribution in RDF/XML of State-Owned Real Estate Assets Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:format"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <IRI>http://publications.europa.eu/resource/authority/file-type/RDF_XML</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:license"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <IRI>https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <Literal xml:lang="it">Distribuzione RDF/XML dell&apos;ontologia dei beni immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <Literal xml:lang="en">RDF/XML distribution of State-Owned Real Estate Assets Ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dcat:accessURL"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
+        <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
+        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.rdf</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="l0:name"/>
+        <IRI>https://w3id.org/italia/data/project/CLV</IRI>
+        <Literal xml:lang="it">Ontologia degli Indirizzi/Luoghi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:identifier"/>
+        <IRI>https://w3id.org/italia/data/public-organization/ISTAT</IRI>
+        <Literal>ISTAT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/italia/data/public-organization/ISTAT</IRI>
+        <Literal xml:lang="it">Istituto Nazionale di Statistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/italia/data/public-organization/ISTAT</IRI>
+        <Literal xml:lang="en">Italian National Institute of Statistics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:identifier"/>
+        <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
+        <Literal>Demanio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
+        <Literal xml:lang="it">Agenzia del demanio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
+        <Literal xml:lang="en">State Property Agency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:description"/>
+        <IRI>https://w3id.org/italia/data/standard/SKOS</IRI>
+        <Literal>The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:identifier"/>
+        <IRI>https://w3id.org/italia/data/standard/SKOS</IRI>
+        <Literal>SKOS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dct:title"/>
+        <IRI>https://w3id.org/italia/data/standard/SKOS</IRI>
+        <Literal>Simple Knowledge Organization System - SKOS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://w3id.org/italia/data/standard/SKOS</IRI>
+        <Literal xml:lang="en">Simple Knowledge Organization System (SKOS)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/BeneImmobileDelloStato</IRI>
+        <Literal xml:lang="it">Bene immobile (812 c.c.), appartenente allo Stato, assoggettato ai regimi giuridici previsti dal Codice Civile e dalle leggi speciali vigenti.
+I beni immobili dello Stato, in gestione all’Agenzia del Demanio, si classificano in:
+• Beni patrimoniali immobili indisponibili: beni immobili appartenenti allo Stato non rientranti nella categoria dei beni demaniali (art. 826 ss.c.c.).
+• Beni immobili patrimoniali disponibili: tutti i beni immobili di proprietà dello Stato diversi dai beni demaniali e patrimoniali indisponibili (art. 828 c.c.).
+Per quanto concerne i beni demaniali (art. 822 c.c.), la gestione dell’Agenzia del Demanio è riferita unicamente a quelli d&apos;interesse storico / artistico non già in gestione al Ministero per i Beni Culturali.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/BeneImmobileDelloStato</IRI>
+        <Literal xml:lang="en">Real estate (Article 812 of the Italian Civil Code) belonging to the State, subject to the legal regimes established by the Civil Code and applicable special laws.
+State-owned real estate, managed by the State Property Agency, is classified as follows:
+• Unavailable immovable assets: real estate belonging to the State that does not fall within the category of state-owned property (Article 826 et seq. of the Italian Civil Code).
+• Available immovable assets: all real estate owned by the State other than state-owned property and unavailable patrimonial property (Article 828 of the Italian Civil Code).
+With regard to state-owned property (Article 822 of the Italian Civil Code), the management of the State Property Agency refers solely to those of historical/artistic interest not already managed by the Ministry of Cultural Heritage.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BeneImmobileDelloStato</IRI>
+        <Literal xml:lang="it">Bene immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/BeneImmobileDelloStato</IRI>
+        <Literal xml:lang="en">State Real Estate Asset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CategoriaBeneImmobile</IRI>
+        <Literal xml:lang="it">Tipologia di beni pubblici gestiti dall’Agenzia del Demanio:
+- Beni Patrimoniali
+- Demanio Artistico-Storico non in gestione al Ministero per i beni culturali
+- Beni non di proprietà dello stato su cui lo Stato vanta diritti reali.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CategoriaBeneImmobile</IRI>
+        <Literal xml:lang="en">Types of public assets managed by the State Property Agency:
+- Heritage Assets
+- Artistic-Historical State Property not managed by the Ministry of Cultural Heritage
+- Non-state-owned assets over which the State holds real rights.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CategoriaBeneImmobile</IRI>
+        <Literal xml:lang="it">Categoria di bene immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CategoriaBeneImmobile</IRI>
+        <Literal xml:lang="en">State Real Estate Asset Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Cespite</IRI>
+        <Literal xml:lang="en">A tangible or intangible item of a durable nature, monetizable and subject to depreciation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Cespite</IRI>
+        <Literal xml:lang="it">Bene materiale/immateriale di natura durevole nel tempo, monetizzabile e ammortizzabile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cespite</IRI>
+        <Literal xml:lang="en">Asset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Cespite</IRI>
+        <Literal xml:lang="it">Cespite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CodiceMEFRaccordoSEC</IRI>
+        <Literal xml:lang="en">Asset classification adopted by the Ministry of Economy and Finance (MEF) to align with the classification of assets and liabilities defined in the European System of Accounts (ESA ’95).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CodiceMEFRaccordoSEC</IRI>
+        <Literal xml:lang="it">Classificazione patrimoniale adottata dal MEF per conformarsi alla classificazione delle poste attive e passive riportate nel SEC ’95 (Reg. (CE) 2223/96; Decreto Interministeriale 18 Aprile 2002; Circolare MEF – Ragioneria Generale dello Stato n. 13 del 3 aprile 2003; D. Lgs. 279/1997).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CodiceMEFRaccordoSEC</IRI>
+        <Literal xml:lang="it">Codice MEF di raccordo SEC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CodiceMEFRaccordoSEC</IRI>
+        <Literal xml:lang="en">MEF Bridging Code for ESA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CodiceMEFRaccordoSECBeneImmobile</IRI>
+        <Literal xml:lang="en">Asset classification of real estate adopted by the Ministry of the Economy and Finance to comply with the classification of assets and liabilities reported in the ESA &apos;95 (Reg. (EC) 2223/96; Interministerial Decree 18 April 2002; MEF – State General Accounting Office Circular no. 13 of 3 April 2003; Legislative Decree 279/1997).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CodiceMEFRaccordoSECBeneImmobile</IRI>
+        <Literal xml:lang="it">Classificazione patrimoniale dei beni immobili adottata dal MEF per conformarsi alla classificazione delle poste attive e passive riportate nel SEC ’95 (Reg. (CE) 2223/96; Decreto Interministeriale 18 Aprile 2002; Circolare MEF – Ragioneria Generale dello Stato n. 13 del 3 aprile 2003; D. Lgs. 279/1997).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CodiceMEFRaccordoSECBeneImmobile</IRI>
+        <Literal xml:lang="it">Codice MEF di raccordo SEC per bene immobile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CodiceMEFRaccordoSECBeneImmobile</IRI>
+        <Literal xml:lang="en">MEF Bridging Code for ESA - real estate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Fabbricato</IRI>
+        <Literal xml:lang="it">Bene immobile inteso come qualsiasi costruzione coperta, isolata da vie o da spazi vuoti, oppure separata da altre costruzioni medianti muri che si elevano, senza soluzione di continuità, dalle fondamenta al tetto, che disponga di uno o più liberi accessi sulla via, e possa avere una o più scale autonome (art. 812 c.c).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Fabbricato</IRI>
+        <Literal xml:lang="en">Real estate is understood as any covered building, isolated from streets or empty spaces, or separated from other buildings by walls that rise seamlessly from the foundations to the roof, which has one or more free accesses from the street, and can have one or more independent staircases (art. 812 of the Civil Code).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Fabbricato</IRI>
+        <Literal xml:lang="en">Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Fabbricato</IRI>
+        <Literal xml:lang="it">Fabbricato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SchedaCatalogazioneBene</IRI>
+        <Literal xml:lang="it">La scheda rappresenta l’unità base di catalogazione e può contenere uno o più beni immobili, qualora questi risultino:
+•  Fisicamente contigui (ad esempio, più edifici all’interno di un medesimo compendio);
+•  Funzionalmente integrati (ad esempio, strutture che operano congiuntamente per finalità istituzionali o operative);
+•  Gestiti unitariamente ai fini amministrativi, contabili o patrimoniali.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SchedaCatalogazioneBene</IRI>
+        <Literal xml:lang="en">The record represents the basic cataloging unit and may contain one or more real estate properties, provided they are:
+• Physically contiguous (for example, multiple buildings within the same complex);
+• Functionally integrated (for example, structures that operate jointly for institutional or operational purposes);
+• Managed jointly for administrative, accounting, or asset management purposes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SchedaCatalogazioneBene</IRI>
+        <Literal xml:lang="it">Scheda di catalogazione del bene dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SchedaCatalogazioneBene</IRI>
+        <Literal xml:lang="en">State Asset Cataloguing Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/StatoBeneImmobile</IRI>
+        <Literal xml:lang="it">Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile pubblico in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/StatoBeneImmobile</IRI>
+        <Literal xml:lang="en">Legal, administrative, or functional condition of a public real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/StatoBeneImmobile</IRI>
+        <Literal xml:lang="it">Stato del Bene immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/StatoBeneImmobile</IRI>
+        <Literal xml:lang="en">Status of State Real Estate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Terreno</IRI>
+        <Literal xml:lang="it">Bene immobile inteso come porzione di suolo priva di edificazioni (art. 812 c.c.) cui viene assegnata una particolare destinazione d’uso sulla base delle norme e degli strumenti urbanistici vigenti.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Terreno</IRI>
+        <Literal xml:lang="en">Real estate defined as a portion of privately owned land (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Terreno</IRI>
+        <Literal xml:lang="en">Land</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Terreno</IRI>
+        <Literal xml:lang="it">Terreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoAccessoImmobile</IRI>
+        <Literal xml:lang="it">La tipologia di accesso di un cespite immobiliare rappresenta la modalità fisica e funzionale attraverso cui è possibile accedere all’unità immobiliare o all’area. Essa descrive le caratteristiche dell’accessibilità in relazione alla destinazione d’uso, alla configurazione dell’immobile e alla sua fruibilità da parte di utenti, enti o soggetti terzi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoAccessoImmobile</IRI>
+        <Literal xml:lang="en">The access type of a real estate asset represents the physical and functional means by which the property or area can be accessed. It describes the accessibility characteristics in relation to the intended use, the property&apos;s configuration, and its usability by users, entities, or third parties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoAccessoImmobile</IRI>
+        <Literal xml:lang="it">Tipo di accesso a immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoAccessoImmobile</IRI>
+        <Literal xml:lang="en">Type of State Real Estate Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoCategoriaPatrimonialeImmobile</IRI>
+        <Literal xml:lang="it">Tipologia di beni immobili pubblici gestiti dall’Agenzia del Demanio:
+• beni disponibili
+• beni assegnati in uso governativo
+• beni indisponibili
+• beni su cui gravano dir. reali a favore terzi
+• diritti reali su beni patrimoniali
+• dir. reali su beni di proprietà di comuni
+• dir. reali su beni di proprietà di provincie
+• dir. reali su beni di proprietà di regioni
+• beni di demanio culturale non in gestione al Ministero per i beni culturali</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoCategoriaPatrimonialeImmobile</IRI>
+        <Literal xml:lang="en">Types of public real estate managed by the State Property Agency:
+• available assets
+• assets assigned for government use
+• unavailable assets
+• assets subject to third-party real estate rights
+• real estate rights on assets
+• real estate rights on assets owned by municipalities
+• real estate rights on assets owned by provinces
+• real estate rights on assets owned by regions
+• cultural state-owned assets not managed by the Ministry of Cultural Heritage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoCategoriaPatrimonialeImmobile</IRI>
+        <Literal xml:lang="it">Tipo di categoria patrimoniale immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoCategoriaPatrimonialeImmobile</IRI>
+        <Literal xml:lang="en">Type of State Real Estate Asset Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoDestinazioneUsoImmobile</IRI>
+        <Literal xml:lang="en">Classification of state-owned buildings based on their intended use, in accordance with current legislation and urban planning tools (Article 23-ter of Presidential Decree No. 380 of June 6, 2001 - Consolidated Building Act; Legislative Decree No. 652 of April 13, 1939; Presidential Decree No. 1142 of December 1949; Legislative Decree No. 200 of December 22, 2008, converted with amendments by Law No. 9 of February 18, 2009).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoDestinazioneUsoImmobile</IRI>
+        <Literal xml:lang="it">Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoDestinazioneUsoImmobile</IRI>
+        <Literal xml:lang="it">Tipo di destinazione di uso degli immobili dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoDestinazioneUsoImmobile</IRI>
+        <Literal xml:lang="en">Type of designation for State Real Estates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoStatoAgibilitàImmobile</IRI>
+        <Literal xml:lang="en">Existence of safety, hygiene, health, and energy-saving conditions for buildings and their installations, and, where applicable, compliance with digital infrastructure requirements assessed in accordance with current legislation (Article 24 of Presidential Decree 380/2001).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoStatoAgibilitàImmobile</IRI>
+        <Literal xml:lang="it">Sussistenza delle condizioni di sicurezza, igiene, salubrità, risparmio energetico degli edifici e degli impianti negli stessi installati, e, ove previsto, di rispetto degli obblighi di infrastrutturazione digitale valutate secondo quanto dispone la normativa vigente (art. 24 DPR 380/2001).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoStatoAgibilitàImmobile</IRI>
+        <Literal xml:lang="it">Tipo di stato di agibilità immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoStatoAgibilitàImmobile</IRI>
+        <Literal xml:lang="en">Type of State Real Estate Habitability Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoStatoOccupazioneImmobile</IRI>
+        <Literal xml:lang="it">Indica la disponibilità giuridica e/o fisica degli immobili pubblici da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TipoStatoOccupazioneImmobile</IRI>
+        <Literal xml:lang="en">Indicates the legal and/or physical availability of public properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoStatoOccupazioneImmobile</IRI>
+        <Literal xml:lang="it">Tipo di stato di occupazione di immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TipoStatoOccupazioneImmobile</IRI>
+        <Literal xml:lang="en">Type of State Real Estate Occupancy Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/avvisoSchedaProvvisoria</IRI>
+        <Literal xml:lang="it">avviso scheda provvisoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/avvisoSchedaProvvisoria</IRI>
+        <Literal xml:lang="en">provisional record notice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/codiceSchedaCatalogazione</IRI>
+        <Literal xml:lang="en">cataloguing record code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/codiceSchedaCatalogazione</IRI>
+        <Literal xml:lang="it">codice scheda catalogazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haCategoriaBene</IRI>
+        <Literal xml:lang="it">ha categoria bene dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haCategoriaBene</IRI>
+        <Literal xml:lang="en">has category State Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haCategoriaPatrimoniale</IRI>
+        <Literal xml:lang="it">ha categoria patrimoniale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haCategoriaPatrimoniale</IRI>
+        <Literal xml:lang="en">has asset category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haCodiceSEC</IRI>
+        <Literal xml:lang="it">ha codice SEC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haCodiceSEC</IRI>
+        <Literal xml:lang="en">has ESA code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haDestinazioneUso</IRI>
+        <Literal xml:lang="it">ha destinazione di uso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haDestinazioneUso</IRI>
+        <Literal xml:lang="en">has designed use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haSchedaCatalogazione</IRI>
+        <Literal xml:lang="it">ha scheda di catalogazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haSchedaCatalogazione</IRI>
+        <Literal xml:lang="en">has a catalog record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haStatoAgibilità</IRI>
+        <Literal xml:lang="it">ha stato di agibilità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haStatoAgibilità</IRI>
+        <Literal xml:lang="en">has status of habitability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haStatoDelBeneImmobile</IRI>
+        <Literal xml:lang="it">ha stato del bene immobile dello Stato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haStatoDelBeneImmobile</IRI>
+        <Literal xml:lang="en">has status the property real-estate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haStatoOccupazione</IRI>
+        <Literal xml:lang="it">ha stato di occupazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haStatoOccupazione</IRI>
+        <Literal xml:lang="en">has occupation status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haTipoAccesso</IRI>
+        <Literal xml:lang="it">ha tipo di accesso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/haTipoAccesso</IRI>
+        <Literal xml:lang="en">has access type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/riferisceProvincia</IRI>
+        <Literal xml:lang="en">related to province</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/riferisceProvincia</IRI>
+        <Literal xml:lang="it">riferisce provincia</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
