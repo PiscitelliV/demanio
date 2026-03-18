@@ -12,7 +12,6 @@
 @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-https://w3id.org/italia/real-estate/onto/StateProperty/TipoAccessoImmobile
 
 
 #################################################################
