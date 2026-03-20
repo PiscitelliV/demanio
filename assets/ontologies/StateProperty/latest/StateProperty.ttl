@@ -80,7 +80,7 @@
 <https://w3id.org/italia/data/public-organization/agd>
    a dcatapit:Agent, foaf:Agent ;
    dct:identifier "Demanio" ;
-   foaf:name "Agenzia del demanio"@it , "State Property Agency"@en .
+   foaf:name "Agenzia del Demanio"@it , "State Property Agency"@en .
   
   
 <https://w3id.org/italia/data/contact-point/ISTAT-NDC>

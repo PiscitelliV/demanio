@@ -879,7 +879,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
         <IRI>https://w3id.org/italia/data/public-organization/agd</IRI>
-        <Literal xml:lang="it">Agenzia del demanio</Literal>
+        <Literal xml:lang="it">Agenzia del Demanio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="foaf:name"/>
