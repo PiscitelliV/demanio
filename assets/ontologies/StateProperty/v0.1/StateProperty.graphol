@@ -402,7 +402,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Tipologia di beni pubblici gestiti dall’Agenzia del Demanio:
+                <lexicalForm>Tipologia di beni immobili dello Stato gestiti dall’Agenzia del Demanio:
 - Beni Patrimoniali
 - Demanio Artistico-Storico non in gestione al Ministero per i beni culturali
 - Beni non di proprietà dello stato su cui lo Stato vanta diritti reali.</lexicalForm>
@@ -414,7 +414,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Types of public assets managed by the State Property Agency:
+                <lexicalForm>Types of State-owned real estate assets managed by the State Property Agency:
 - Heritage Assets
 - Artistic-Historical State Property not managed by the Ministry of Cultural Heritage
 - Non-state-owned assets over which the State holds real rights.</lexicalForm>
@@ -660,7 +660,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile pubblico in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile.</lexicalForm>
+                <lexicalForm>Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile dello Stato in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile.</lexicalForm>
                 <datatype/>
                 <language>it</language>
               </object>
@@ -669,7 +669,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/StatoBeneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Legal, administrative, or functional condition of a public real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property.</lexicalForm>
+                <lexicalForm>Legal, administrative, or functional condition of a state-owned real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property.</lexicalForm>
                 <datatype/>
                 <language>en</language>
               </object>
@@ -710,7 +710,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/Terreno</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Real estate defined as a portion of privately owned land (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments.</lexicalForm>
+                <lexicalForm>Real estate defined as a portion of land free of buildings (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments.</lexicalForm>
                 <datatype/>
                 <language>en</language>
               </object>
@@ -783,7 +783,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Tipologia di beni immobili pubblici gestiti dall’Agenzia del Demanio:
+                <lexicalForm>Tipologia di beni immobili dello Stato gestiti dall’Agenzia del Demanio:
 • beni disponibili
 • beni assegnati in uso governativo
 • beni indisponibili
@@ -801,7 +801,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Types of public real estate managed by the State Property Agency:
+                <lexicalForm>Types of State-owned real estate managed by the State Property Agency:
 • available assets
 • assets assigned for government use
 • unavailable assets
@@ -842,7 +842,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9.</lexicalForm>
+                <lexicalForm>Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9).</lexicalForm>
                 <datatype/>
                 <language>it</language>
               </object>
@@ -924,7 +924,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Indica la disponibilità giuridica e/o fisica degli immobili pubblici da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti.</lexicalForm>
+                <lexicalForm>Indica la disponibilità giuridica e/o fisica degli immobili dello Stato da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti.</lexicalForm>
                 <datatype/>
                 <language>it</language>
               </object>
@@ -933,7 +933,7 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
               <subject>https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile</subject>
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
-                <lexicalForm>Indicates the legal and/or physical availability of public properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws.</lexicalForm>
+                <lexicalForm>Indicates the legal and/or physical availability of state-owned properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws.</lexicalForm>
                 <datatype/>
                 <language>en</language>
               </object>

@@ -46,8 +46,8 @@
                                     owl:versionInfo "Versione 1.0"@en ,
                                                     "Version 1.0"@it ;
                                     dcat:contactPoint <https://w3id.org/italia/data/contact-point/ISTAT-NDC> ;
-                                    dcat:keyword "Demanio"@it , "Patrimonio immobiliare dello Stato"@it , "Gestione patrimoniale"@it , "Beni pubblici dello Stato"@it ,
-                                                 "State property"@en , "Real estate"@en , "Asset management"@en , "State public assets"@en ; 													 
+                                    dcat:keyword "Demanio"@it , "Patrimonio immobiliare dello Stato"@it , "Gestione patrimoniale"@it , "Beni immobili dello Stato"@it ,
+                                                 "State property"@en , "Real estate"@en , "Asset management"@en , "State-owned real estate assets"@en ;
                                     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;						
                                     prov:wasDerivedFrom <https://w3id.org/italia/real-estate/onto/StateProperty/1.0> ;
                                     admsapit:acronym "BIS" ;
@@ -148,7 +148,8 @@
 #################################################################
 #    Datatypes
 
-#################################################################
+#################################################################
+
 ###  http://www.w3.org/2001/XMLSchema#boolean
 xsd:boolean rdf:type rdfs:Datatype .
 
@@ -158,9 +159,11 @@ xsd:string rdf:type rdfs:Datatype .
 
 
 #################################################################
-#    Object Properties
+#    Object Properties
+
 #################################################################
-
+
+
 ###  https://w3id.org/italia/onto/CLV/hasSpatialCoverage
 CLV:hasSpatialCoverage rdf:type owl:ObjectProperty .
 
@@ -255,9 +258,11 @@ StateProperty:riferisceProvincia rdf:type owl:ObjectProperty ,
 
 
 #################################################################
-#    Data properties
+#    Data properties
+
 #################################################################
-
+
+
 ###  https://w3id.org/italia/real-estate/onto/StateProperty/avvisoSchedaProvvisoria
 StateProperty:avvisoSchedaProvvisoria rdf:type owl:DatatypeProperty ,
                                                owl:FunctionalProperty ;
@@ -277,9 +282,11 @@ StateProperty:codiceSchedaCatalogazione rdf:type owl:DatatypeProperty ,
 
 
 #################################################################
-#    Classes
+#    Classes
+
 #################################################################
-
+
+
 ###  https://w3id.org/italia/onto/CLV/Identifier
 CLV:Identifier rdf:type owl:Class .
 
@@ -315,11 +322,11 @@ With regard to state-owned property (Article 822 of the Italian Civil Code), the
 
 ###  https://w3id.org/italia/real-estate/onto/StateProperty/CategoriaBeneImmobile
 StateProperty:CategoriaBeneImmobile rdf:type owl:Class ;
-                                    rdfs:comment """Tipologia di beni pubblici gestiti dall’Agenzia del Demanio:
+                                    rdfs:comment """Tipologia di beni immobili dello Stato gestiti dall’Agenzia del Demanio:
 - Beni Patrimoniali
 - Demanio Artistico-Storico non in gestione al Ministero per i beni culturali
 - Beni non di proprietà dello stato su cui lo Stato vanta diritti reali."""@it ,
-                                                 """Types of public assets managed by the State Property Agency:
+                                                 """Types of State-owned real estate assets managed by the State Property Agency:
 - Heritage Assets
 - Artistic-Historical State Property not managed by the Ministry of Cultural Heritage
 - Non-state-owned assets over which the State holds real rights."""@en ;
@@ -392,8 +399,8 @@ StateProperty:StatoBeneImmobile rdf:type owl:Class ;
                                                       owl:someValuesFrom owl:Thing
                                                     ] ;
                                 rdfs:subClassOf TI:TimeIndexedEvent ;
-                                rdfs:comment "Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile pubblico in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile."@it ,
-                                             "Legal, administrative, or functional condition of a public real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property."@en ;
+                                rdfs:comment "Condizione giuridica, amministrativa o funzionale in cui si trova un bene immobile dello Stato in un determinato momento. Essa è descritta attraverso specifiche tipologie di stato che caratterizzano il bene ai fini della gestione patrimoniale, tra cui: tipo categoria patrimoniale, destinazione d’uso, tipologia di accesso, stato di agibilità e stato di occupazione dell’immobile."@it ,
+                                             "Legal, administrative, or functional condition of a state-owned real estate asset at a given time. It is described through specific status types that characterize the asset for asset management purposes, including: asset category, intended use, type of access, usability status, and occupancy status of the property."@en ;
                                 rdfs:label "Stato del Bene immobile dello Stato"@it ,
                                            "Status of State Real Estate"@en .
 
@@ -401,7 +408,7 @@ StateProperty:StatoBeneImmobile rdf:type owl:Class ;
 ###  https://w3id.org/italia/real-estate/onto/StateProperty/Terreno
 StateProperty:Terreno rdf:type owl:Class ;
                       rdfs:comment "Bene immobile inteso come porzione di suolo priva di edificazioni (art. 812 c.c.) cui viene assegnata una particolare destinazione d’uso sulla base delle norme e degli strumenti urbanistici vigenti."@it ,
-                                   "Real estate defined as a portion of privately owned land (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments."@en ;
+                                   "Real estate defined as a portion of land free of buildings (Article 812 of the Italian Civil Code) assigned a specific use based on current urban planning regulations and instruments."@en ;
                       rdfs:label "Land"@en ,
                                  "Terreno"@it .
 
@@ -416,7 +423,7 @@ StateProperty:TipoAccessoImmobile rdf:type owl:Class ;
 
 ###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoCategoriaPatrimonialeImmobile
 StateProperty:TipoCategoriaPatrimonialeImmobile rdf:type owl:Class ;
-                                                rdfs:comment """Tipologia di beni immobili pubblici gestiti dall’Agenzia del Demanio:
+                                                rdfs:comment """Tipologia di beni immobili dello Stato gestiti dall’Agenzia del Demanio:
 • beni disponibili
 • beni assegnati in uso governativo
 • beni indisponibili
@@ -426,7 +433,7 @@ StateProperty:TipoCategoriaPatrimonialeImmobile rdf:type owl:Class ;
 • dir. reali su beni di proprietà di provincie
 • dir. reali su beni di proprietà di regioni
 • beni di demanio culturale non in gestione al Ministero per i beni culturali"""@it ,
-                                                             """Types of public real estate managed by the State Property Agency:
+                                                             """Types of State-owned real estate managed by the State Property Agency:
 • available assets
 • assets assigned for government use
 • unavailable assets
@@ -443,7 +450,7 @@ StateProperty:TipoCategoriaPatrimonialeImmobile rdf:type owl:Class ;
 ###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoDestinazioneUsoImmobile
 StateProperty:TipoDestinazioneUsoImmobile rdf:type owl:Class ;
                                           rdfs:comment "Classification of state-owned buildings based on their intended use, in accordance with current legislation and urban planning tools (Article 23-ter of Presidential Decree No. 380 of June 6, 2001 - Consolidated Building Act; Legislative Decree No. 652 of April 13, 1939; Presidential Decree No. 1142 of December 1949; Legislative Decree No. 200 of December 22, 2008, converted with amendments by Law No. 9 of February 18, 2009)."@en ,
-                                                       "Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9."@it ;
+                                                       "Classificazione degli immobili dello Stato in base alla loro destinazione d’uso, coerentemente con la normativa e gli strumenti urbanistici vigenti (art. 23 ter D.P.R. 6 giugno 2001, n. 380 - Testo Unico Edilizia; d.l. 13 aprile 1939, n. 652; D.P.R. dicembre 1949, n. 1142; d.l. 22 dicembre 2008, n. 200, convertito con modificazioni dalla l. 18 febbraio 2009, n. 9)."@it ;
                                           rdfs:label "Tipo di destinazione di uso degli immobili dello Stato"@it ,
                                                      "Type of designation for State Real Estates"@en .
 
@@ -458,16 +465,18 @@ StateProperty:TipoStatoAgibilitàImmobile rdf:type owl:Class ;
 
 ###  https://w3id.org/italia/real-estate/onto/StateProperty/TipoStatoOccupazioneImmobile
 StateProperty:TipoStatoOccupazioneImmobile rdf:type owl:Class ;
-                                           rdfs:comment "Indica la disponibilità giuridica e/o fisica degli immobili pubblici da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti."@it ,
-                                                        "Indicates the legal and/or physical availability of public properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws."@en ;
+                                           rdfs:comment "Indica la disponibilità giuridica e/o fisica degli immobili dello Stato da parte di soggetti pubblici o privati, secondo le norme del Codice civile e altre leggi speciali vigenti."@it ,
+                                                        "Indicates the legal and/or physical availability of state-owned properties by public or private entities, in accordance with the provisions of the Civil Code and other applicable special laws."@en ;
                                            rdfs:label "Tipo di stato di occupazione di immobile dello Stato"@it ,
                                                       "Type of State Real Estate Occupancy Status"@en .
 
 
 #################################################################
-#    General axioms
+#    General axioms
+
 #################################################################
-
+
+
 [ rdf:type owl:Class ;
   owl:unionOf ( StateProperty:Fabbricato
                 StateProperty:Terreno
