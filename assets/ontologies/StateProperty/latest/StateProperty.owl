@@ -769,7 +769,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
         <IRI>https://w3id.org/italia/data/distribution/StateProperty-JSON-LD</IRI>
-        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.jsonld</IRI>
+        <IRI>https://raw.githubusercontent.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.jsonld</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dct:description"/>
@@ -809,7 +809,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
         <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-TURTLE</IRI>
-        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.ttl</IRI>
+        <IRI>https://raw.githubusercontent.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.ttl</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dct:description"/>
@@ -849,7 +849,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dcat:downloadURL"/>
         <IRI>https://w3id.org/italia/data/distribution/StateProperty-RDF-XML</IRI>
-        <IRI>https://github.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.rdf</IRI>
+        <IRI>https://raw.githubusercontent.com/Agenzia-del-Demanio/NDC/tree/main/assets/ontologies/StateProperty/latest/StateProperty.rdf</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="l0:name"/>
